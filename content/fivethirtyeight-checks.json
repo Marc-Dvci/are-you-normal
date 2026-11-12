@@ -1,0 +1,412 @@
+[
+  {
+    "id": "fly-recline",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 2,
+    "column": "Do you ever recline your seat when you fly?",
+    "map": {
+      "About half the time": 2,
+      "Usually": 1,
+      "Always": 0,
+      "Once in a while": 3,
+      "Never": 4
+    }
+  },
+  {
+    "id": "fly-recline-rude",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 12,
+    "column": "Is itrude to recline your seat on a plane?",
+    "map": {
+      "Yes, somewhat rude": 1,
+      "No, not rude at all": 0,
+      "Yes, very rude": 2
+    }
+  },
+  {
+    "id": "fly-armrests-three",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 5,
+    "column": "In a row of three seats, who should get to use the two arm rests?",
+    "map": {
+      "The arm rests should be shared": 0,
+      "Whoever puts their arm on the arm rest first": 2,
+      "The person in the middle seat gets both arm rests": 1,
+      "Other (please specify)": 4,
+      "The people in the aisle and window seats get both arm rests": 3
+    }
+  },
+  {
+    "id": "fly-armrest-two",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 6,
+    "column": "In a row of two seats, who should get to use the middle arm rest?",
+    "map": {
+      "The arm rests should be shared": 0,
+      "The person in aisle": 2,
+      "Whoever puts their arm on the arm rest first": 1,
+      "Other (please specify)": 4,
+      "The person by the window": 3
+    }
+  },
+  {
+    "id": "fly-shade",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 7,
+    "column": "Who should have control over the window shade?",
+    "map": {
+      "Everyone in the row should have some say": 0,
+      "The person in the window seat should have exclusive control": 1
+    }
+  },
+  {
+    "id": "fly-empty-seat",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 8,
+    "column": "Is itrude to move to an unsold seat on a plane?",
+    "map": {
+      "No, not rude at all": 0,
+      "Yes, somewhat rude": 1,
+      "Yes, very rude": 2
+    }
+  },
+  {
+    "id": "fly-chat",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 9,
+    "column": "Generally speaking, is it rude to say more than a few words tothe stranger sitting next to you on a plane?",
+    "map": {
+      "No, not at all rude": 0,
+      "Yes, somewhat rude": 1,
+      "Yes, very rude": 2
+    }
+  },
+  {
+    "id": "fly-owe",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 11,
+    "column": "Under normal circumstances, does a person who reclines their seat during a flight have any obligation to the person sitting behind them?",
+    "map": {
+      "Yes, they should not recline their chair if the person behind them asks them not to": 0,
+      "No, the person on the flight has no obligation to the person behind them": 1
+    }
+  },
+  {
+    "id": "fly-ban",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 13,
+    "column": "Given the opportunity, would you eliminate the possibility of reclining seats on planes entirely?",
+    "map": {
+      "No": 1,
+      "Yes": 0
+    }
+  },
+  {
+    "id": "fly-swap-friends",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 14,
+    "column": "Is it rude to ask someone to switch seats with you in order to be closer to friends?",
+    "map": {
+      "No, not at all rude": 0,
+      "Yes, somewhat rude": 1,
+      "Yes, very rude": 2
+    }
+  },
+  {
+    "id": "fly-wake-bathroom",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 16,
+    "column": "Is it rude to wake a passenger up if you are trying to go to the bathroom?",
+    "map": {
+      "No, not at all rude": 0,
+      "Yes, somewhat rude": 1,
+      "Yes, very rude": 2
+    }
+  },
+  {
+    "id": "fly-wake-walk",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 17,
+    "column": "Is itrude to wake a passenger up if you are trying to walk around?",
+    "map": {
+      "No, not at all rude": 0,
+      "Yes, somewhat rude": 1,
+      "Yes, very rude": 2
+    }
+  },
+  {
+    "id": "fly-phone-takeoff",
+    "kind": "single",
+    "file": "flying-etiquette-survey/flying-etiquette.csv",
+    "columnIndex": 20,
+    "column": "Have you ever used personal electronics during take off or landing in violation of a flight attendant's direction?",
+    "map": {
+      "No": 1,
+      "Yes": 0
+    }
+  },
+  {
+    "id": "steak",
+    "kind": "single",
+    "file": "steak-survey/steak-risk-survey.csv",
+    "columnIndex": 9,
+    "column": "How do you like your steak prepared?",
+    "map": {
+      "Medium rare": 1,
+      "Rare": 0,
+      "Medium": 2,
+      "Medium Well": 3,
+      "Well": 4
+    }
+  },
+  {
+    "id": "skydiving",
+    "kind": "single",
+    "file": "steak-survey/steak-risk-survey.csv",
+    "columnIndex": 5,
+    "column": "Have you ever been skydiving?",
+    "map": {
+      "No": 1,
+      "Yes": 0
+    }
+  },
+  {
+    "id": "tg-celebrate",
+    "kind": "single",
+    "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+    "columnIndex": 1,
+    "column": "Do you celebrate Thanksgiving?",
+    "map": {
+      "Yes": 0,
+      "No": 1
+    }
+  },
+  {
+    "id": "tg-main-dish",
+    "kind": "single",
+    "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+    "columnIndex": 2,
+    "column": "What is typically the main dish at your Thanksgiving dinner?",
+    "map": {
+      "Turkey": 0,
+      "Tofurkey": 2,
+      "Other (please specify)": 3,
+      "Ham/Pork": 1,
+      "Turducken": 3,
+      "Roast beef": 3,
+      "Chicken": 3,
+      "I don't know": 3
+    }
+  },
+  {
+    "id": "tg-cranberry",
+    "kind": "single",
+    "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+    "columnIndex": 8,
+    "column": "What type of cranberry saucedo you typically have?",
+    "map": {
+      "None": 2,
+      "Other (please specify)": 3,
+      "Homemade": 1,
+      "Canned": 0
+    }
+  },
+  {
+    "id": "tg-stuffing",
+    "kind": "single",
+    "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+    "columnIndex": 6,
+    "column": "What kind of stuffing/dressing do you typically have?",
+    "map": {
+      "Bread-based": 0,
+      "Rice-based": 1,
+      "None": 2,
+      "Other (please specify)": 3
+    }
+  },
+  {
+    "id": "tg-friendsgiving",
+    "kind": "single",
+    "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+    "columnIndex": 56,
+    "column": "Have you ever attended a \"Friendsgiving?\"",
+    "map": {
+      "No": 1,
+      "Yes": 0
+    }
+  },
+  {
+    "id": "tg-travel",
+    "kind": "single",
+    "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+    "columnIndex": 52,
+    "column": "How far will you travel for Thanksgiving?",
+    "map": {
+      "Thanksgiving is local--it will take place in the town I live in": 1,
+      "Thanksgiving is out of town but not too far--it's a drive of a few hours or less": 2,
+      "Thanksgiving is happening at my home--I won't travel at all": 0,
+      "Thanksgiving is out of town and far away--I have to drive several hours or fly": 3
+    }
+  },
+  {
+    "id": "tg-black-friday",
+    "kind": "single",
+    "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+    "columnIndex": 57,
+    "column": "Will you shop any Black Friday sales on Thanksgiving Day?",
+    "map": {
+      "No": 1,
+      "Yes": 0
+    }
+  },
+  {
+    "id": "oxford-comma",
+    "kind": "single",
+    "file": "comma-survey/comma-survey.csv",
+    "columnIndex": 1,
+    "column": "In your opinion, which sentence is more gramatically correct?",
+    "map": {
+      "It's important for a person to be honest, kind and loyal.": 1,
+      "It's important for a person to be honest, kind, and loyal.": 0
+    }
+  },
+  {
+    "id": "data-is",
+    "kind": "single",
+    "file": "comma-survey/comma-survey.csv",
+    "columnIndex": 4,
+    "column": "How would you write the following sentence?",
+    "map": {
+      "Some experts say it's important to drink milk, but the data is inconclusive.": 0,
+      "Some experts say it's important to drink milk, but the data are inconclusive.": 1
+    }
+  },
+  {
+    "id": "data-wondered",
+    "kind": "single",
+    "file": "comma-survey/comma-survey.csv",
+    "columnIndex": 5,
+    "column": "When faced with using the word \"data\", have you ever spent time considering if the word was a singular or plural noun?",
+    "map": {
+      "No": 1,
+      "Yes": 0
+    }
+  },
+  {
+    "id": "oxford-heard",
+    "kind": "single",
+    "file": "comma-survey/comma-survey.csv",
+    "columnIndex": 2,
+    "column": "Prior to reading about it above, had you heard of the serial (or Oxford) comma?",
+    "map": {
+      "Yes": 0,
+      "No": 1
+    }
+  },
+  {
+    "id": "oxford-care",
+    "kind": "single",
+    "file": "comma-survey/comma-survey.csv",
+    "columnIndex": 3,
+    "column": "How much, if at all, do you care about the use (or lack thereof) of the serial (or Oxford) comma in grammar?",
+    "map": {
+      "Some": 1,
+      "Not much": 2,
+      "A lot": 0,
+      "Not at all": 3
+    }
+  },
+  {
+    "id": "sw-seen",
+    "kind": "single",
+    "file": "star-wars-survey/StarWars.csv",
+    "columnIndex": 1,
+    "column": "Have you seen any of the 6 films in the Star Wars franchise?",
+    "map": {
+      "Yes": 0,
+      "No": 1
+    }
+  },
+  {
+    "id": "sw-shot-first",
+    "kind": "single",
+    "file": "star-wars-survey/StarWars.csv",
+    "columnIndex": 29,
+    "column": "Which character shot first?",
+    "map": {
+      "I don't understand this question": 2,
+      "Greedo": 1,
+      "Han": 0
+    }
+  },
+  {
+    "id": "sw-jar-jar",
+    "kind": "single",
+    "file": "star-wars-survey/StarWars.csv",
+    "columnIndex": 26,
+    "column": "",
+    "map": {
+      "Very favorably": 0,
+      "Unfamiliar (N/A)": 5,
+      "Very unfavorably": 4,
+      "Somewhat favorably": 1,
+      "Somewhat unfavorably": 3,
+      "Neither favorably nor unfavorably (neutral)": 2
+    }
+  },
+  {
+    "id": "trek-fan",
+    "kind": "single",
+    "file": "star-wars-survey/StarWars.csv",
+    "columnIndex": 32,
+    "column": "Do you consider yourself to be a fan of the Star Trek franchise?",
+    "map": {
+      "No": 1,
+      "Yes": 0
+    }
+  },
+  {
+    "id": "weather-daily",
+    "kind": "single",
+    "file": "weather-check/weather-check.csv",
+    "columnIndex": 1,
+    "column": "Do you typically check a daily weather report?",
+    "map": {
+      "Yes": 0,
+      "No": 1
+    }
+  },
+  {
+    "id": "south-texas",
+    "kind": "checkbox",
+    "file": "region-survey/SOUTH.csv",
+    "columnIndex": 9,
+    "column": ""
+  },
+  {
+    "id": "south-maryland",
+    "kind": "checkbox",
+    "file": "region-survey/SOUTH.csv",
+    "columnIndex": 16,
+    "column": ""
+  },
+  {
+    "id": "midwest-pennsylvania",
+    "kind": "checkbox",
+    "file": "region-survey/MIDWEST.csv",
+    "columnIndex": 22,
+    "column": ""
+  }
+]

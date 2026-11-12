@@ -1,0 +1,587 @@
+/* ---------- Page ---------- */
+
+.page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  animation: enter 220ms var(--ease-out) both;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.screen.center {
+  justify-content: center;
+  gap: 20px;
+}
+
+.loading {
+  margin: 28px 0;
+  color: var(--ink-2);
+  font-weight: 500;
+}
+
+.question.small {
+  font-size: clamp(19px, 5.2vw, 22px);
+  margin: 8px 0 6px;
+}
+
+.hint {
+  margin: 14px 0 0;
+  color: var(--ink-2);
+  font-size: 14px;
+}
+
+.line {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.muted {
+  color: var(--ink-2);
+  font-weight: 400;
+}
+
+/* ---------- Guess ---------- */
+
+.prompt {
+  margin: 6px 0 10px;
+  font-size: 17px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.prompt em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--red-text);
+}
+
+.crowd-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.crowd {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 46vh;
+  max-height: 46dvh;
+}
+
+.crowd-guess {
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.crowd-wrap.reveal .crowd {
+  max-height: 34vh;
+  max-height: 34dvh;
+}
+
+.crowd .fig-empty,
+.crowd .fig-red,
+.crowd .fig-ink {
+  transition: fill 90ms linear;
+}
+
+.readout {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 8px 0 4px;
+}
+
+.readout .big,
+.truth .big {
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+
+.readout .of,
+.truth .of {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink-2);
+  line-height: 1.2;
+}
+
+.nudge {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.nudge button {
+  width: 46px;
+  height: 46px;
+  border: 2px solid var(--ink);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.nudge button:active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.actionbar {
+  position: sticky;
+  bottom: 0;
+  margin-top: auto;
+  padding: 12px 0 16px;
+  background: var(--paper);
+  z-index: 2;
+}
+
+/* ---------- Reveal ---------- */
+
+.verdict {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.truth {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.truth .of strong {
+  color: var(--ink);
+}
+
+.verdict .stamp {
+  margin-right: 6px;
+  flex: none;
+}
+
+.reveal-screen .line {
+  margin: 12px 0 8px;
+}
+
+.score-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  margin: 10px 0 14px;
+  font-size: 15px;
+}
+
+.score-line .mark {
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  background: var(--red);
+  align-self: center;
+}
+
+.score-line .points {
+  margin-left: auto;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.compare {
+  margin: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.compare > div {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--hair);
+}
+
+.compare dt {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.compare dt .n {
+  display: block;
+  margin-top: 2px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
+}
+
+.compare dt .n::after {
+  content: ' players';
+}
+
+.compare dd {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.compare dd .num {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.contrast {
+  margin: 12px 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--blue-text);
+  text-wrap: balance;
+}
+
+.contrast:empty {
+  display: none;
+}
+
+.source {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+
+.source .link {
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+}
+
+/* ---------- Day ---------- */
+
+.day-head {
+  padding: 18px 0 16px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.day-head .stamp {
+  margin: 18px 0 6px 4px;
+}
+
+.day-head .line {
+  font-size: 20px;
+}
+
+.mean {
+  margin: 8px 0 0;
+  color: var(--ink-2);
+}
+
+.mean strong {
+  color: var(--ink);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.stats > div {
+  padding: 12px 0 12px 12px;
+  border-left: 1px solid var(--hair);
+}
+
+.stats > div:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.stats dt {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.stats dd {
+  margin: 2px 0 0;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.stats small {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-2);
+  letter-spacing: 0;
+}
+
+.bias {
+  margin: 14px 0 0;
+  padding-left: 12px;
+  border-left: 3px solid var(--red);
+  font-weight: 500;
+}
+
+.answers {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.answers li {
+  padding: 10px 0 12px;
+  border-top: 1px solid var(--hair);
+}
+
+.answers .q {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.answers .a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 2px 0 6px;
+  font-size: 17px;
+}
+
+.answers .a .num {
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+
+.fine {
+  margin: -4px 0 4px;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.board {
+  margin: 22px 0 0;
+}
+
+.board ol {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: board;
+}
+
+.board li {
+  counter-increment: board;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-top: 1px solid var(--hair);
+  font-size: 15px;
+}
+
+.board li span:first-child::before {
+  content: counter(board) '. ';
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.next {
+  margin: 20px 0 24px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+/* ---------- Splash (inline in the feed) ---------- */
+
+.splash {
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.splash .masthead {
+  padding: 10px 0 8px;
+  border-bottom-width: 2px;
+}
+
+.splash .wordmark {
+  font-size: 15px;
+}
+
+.splash .kicker {
+  margin-top: 10px;
+}
+
+.splash .question {
+  font-size: clamp(19px, 5.4vw, 24px);
+  margin: 6px 0 10px;
+}
+
+.splash .foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.splash-mid,
+.splash-done {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.splash-verdict {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.splash-verdict .line {
+  margin: 0;
+  font-size: 17px;
+}
+
+@media (max-height: 360px) {
+  .splash .kicker {
+    display: none;
+  }
+  .splash .question {
+    font-size: 18px;
+    margin: 8px 0 6px;
+  }
+  .splash .form.compact .row {
+    min-height: 34px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 640px) {
+  :root {
+    --pad: 28px;
+  }
+}
+
+/* ---------- Additions ---------- */
+
+.crowd[data-pointer]:focus-visible {
+  outline: none;
+}
+
+.contrast .kicker {
+  margin: 0 0 3px;
+  color: var(--blue-text);
+}
+
+.contrast p:last-child {
+  margin: 0;
+}
+
+.mean-row {
+  margin: 14px 0 0;
+}
+
+.btn span:first-child {
+  text-align: left;
+}
+
+.splash-strip {
+  margin-top: auto;
+  padding: 12px 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.splash-strip .figure-row {
+  width: 100%;
+  height: auto;
+}
+
+.splash-strip p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+@media (max-height: 470px) {
+  .splash-strip {
+    display: none;
+  }
+}
+
+/* Keep the reveal's key lines above the fold on a 780px phone. */
+.crowd-wrap.reveal .crowd {
+  max-height: 29vh;
+  max-height: 29dvh;
+}
+
+.reveal-screen .truth .big {
+  font-size: 52px;
+}
+
+.reveal-screen .line {
+  margin: 8px 0 6px;
+}
+
+.reveal-screen .score-line {
+  margin: 8px 0 10px;
+}
+
+.reveal-screen .compare > div {
+  padding: 7px 0;
+}
+
+.day-head {
+  padding-top: 10px;
+}
+
+.day-head .stamp {
+  margin: 14px 0 4px 4px;
+}

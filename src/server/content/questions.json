@@ -1,0 +1,1215 @@
+[
+  {
+    "id": "fly-recline",
+    "text": "Do you recline your seat when you fly?",
+    "options": [
+      "Always",
+      "Usually",
+      "About half the time",
+      "Once in a while",
+      "Never"
+    ],
+    "pcts": [
+      16.0,
+      20.4,
+      13.7,
+      30.0,
+      19.9
+    ],
+    "category": "travel",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "858 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "data-is",
+    "text": "Fill the gap: “The data ___ inconclusive.”",
+    "options": [
+      "is",
+      "are"
+    ],
+    "pcts": [
+      79.1,
+      20.9
+    ],
+    "category": "language",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, comma survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/comma-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/comma-survey/comma-survey.csv",
+      "sample": "1,093 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "skydiving",
+    "text": "Have you ever been skydiving?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      6.7,
+      93.3
+    ],
+    "category": "leisure",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, steak survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/steak-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/steak-survey/steak-risk-survey.csv",
+      "sample": "538 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "steak",
+    "text": "How do you like your steak?",
+    "options": [
+      "Rare",
+      "Medium rare",
+      "Medium",
+      "Medium well",
+      "Well done"
+    ],
+    "pcts": [
+      5.3,
+      38.4,
+      30.6,
+      17.4,
+      8.3
+    ],
+    "category": "food",
+    "crowd": "steak eaters",
+    "source": {
+      "name": "FiveThirtyEight, steak survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/steak-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/steak-survey/steak-risk-survey.csv",
+      "sample": "432 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "tg-cranberry",
+    "text": "Cranberry sauce at Thanksgiving: canned or homemade?",
+    "options": [
+      "Canned",
+      "Homemade",
+      "None",
+      "Other"
+    ],
+    "pcts": [
+      51.5,
+      30.9,
+      15.0,
+      2.6
+    ],
+    "category": "food",
+    "crowd": "people who celebrate it",
+    "source": {
+      "name": "FiveThirtyEight, Thanksgiving survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+      "sample": "974 people surveyed online in the US",
+      "year": 2015
+    }
+  },
+  {
+    "id": "sw-shot-first",
+    "text": "Han or Greedo: who shot first?",
+    "options": [
+      "Han",
+      "Greedo",
+      "I don't get the question"
+    ],
+    "pcts": [
+      39.2,
+      23.8,
+      37.0
+    ],
+    "category": "culture",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, Star Wars survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/star-wars-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/star-wars-survey/StarWars.csv",
+      "sample": "828 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "eu-books",
+    "text": "How many books did you read in the last 12 months?",
+    "options": [
+      "None",
+      "1 to 4",
+      "5 to 9",
+      "10 or more"
+    ],
+    "pcts": [
+      47.2,
+      26.9,
+      12.2,
+      13.8
+    ],
+    "category": "leisure",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, persons reading books in the last 12 months (ilc_scp33)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_scp33/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": null,
+      "sample": "People aged 16 and over in the EU",
+      "year": 2022
+    }
+  },
+  {
+    "id": "fly-armrests-three",
+    "text": "In a row of three seats, who gets the two armrests?",
+    "options": [
+      "Shared",
+      "Middle seat gets both",
+      "First to rest an arm",
+      "Aisle and window get both",
+      "Other"
+    ],
+    "pcts": [
+      68.6,
+      13.9,
+      10.2,
+      2.1,
+      5.2
+    ],
+    "category": "manners",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "856 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "us-tv-yesterday",
+    "text": "Did you watch TV yesterday?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      74.3,
+      25.7
+    ],
+    "category": "leisure",
+    "crowd": "Americans",
+    "source": {
+      "name": "US Bureau of Labor Statistics, American Time Use Survey, Table 1",
+      "url": "https://www.bls.gov/news.release/atus.t01.htm",
+      "licence": "Public domain",
+      "licenceUrl": "https://www.bls.gov/opub/copyright-information.htm",
+      "dataUrl": null,
+      "sample": "People aged 15 and over in the US, share active on an average day",
+      "year": 2025
+    }
+  },
+  {
+    "id": "oxford-comma",
+    "text": "Which looks right to you?",
+    "options": [
+      "Honest, kind, and loyal",
+      "Honest, kind and loyal"
+    ],
+    "pcts": [
+      56.8,
+      43.2
+    ],
+    "category": "language",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, comma survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/comma-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/comma-survey/comma-survey.csv",
+      "sample": "1,129 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "tg-friendsgiving",
+    "text": "Have you ever been to a Friendsgiving?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      28.2,
+      71.8
+    ],
+    "category": "holidays",
+    "crowd": "people who celebrate it",
+    "source": {
+      "name": "FiveThirtyEight, Thanksgiving survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+      "sample": "951 people surveyed online in the US",
+      "year": 2015
+    }
+  },
+  {
+    "id": "pew-tipping",
+    "text": "Is tipping more of a choice or more of an obligation?",
+    "options": [
+      "A choice",
+      "An obligation",
+      "It depends"
+    ],
+    "pcts": [
+      21,
+      29,
+      49
+    ],
+    "category": "manners",
+    "crowd": "Americans",
+    "source": {
+      "name": "Pew Research Center, Tipping Culture in America",
+      "url": "https://www.pewresearch.org/2023/11/09/how-americans-feel-about-the-basics-of-tipping/",
+      "licence": "Quoted with attribution, Pew Research Center use policy",
+      "licenceUrl": "https://www.pewresearch.org/about/use-policy/",
+      "dataUrl": null,
+      "sample": "11,945 US adults",
+      "year": 2023
+    }
+  },
+  {
+    "id": "fly-wake-bathroom",
+    "text": "Is it rude to wake your seatmate so you can go to the bathroom?",
+    "options": [
+      "Not rude at all",
+      "Somewhat rude",
+      "Very rude"
+    ],
+    "pcts": [
+      62.9,
+      33.1,
+      4.0
+    ],
+    "category": "manners",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "850 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "eu-languages",
+    "text": "How many foreign languages do you know?",
+    "options": [
+      "None",
+      "One",
+      "Two",
+      "Three or more"
+    ],
+    "pcts": [
+      25.4,
+      37.0,
+      25.1,
+      12.4
+    ],
+    "category": "language",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, persons knowing foreign languages (edat_aes_l21)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/edat_aes_l21/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": null,
+      "sample": "People aged 18 to 69 in the EU",
+      "year": 2022
+    }
+  },
+  {
+    "id": "south-texas",
+    "text": "Is Texas part of the South?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      56.4,
+      43.6
+    ],
+    "category": "culture",
+    "crowd": "people in the US",
+    "source": {
+      "name": "FiveThirtyEight, regions survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/region-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/region-survey/SOUTH.csv",
+      "sample": "2,528 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "tg-travel",
+    "text": "How far do you travel for Thanksgiving?",
+    "options": [
+      "I host, no travel",
+      "In my own town",
+      "Out of town, a few hours",
+      "Hours away, or a flight"
+    ],
+    "pcts": [
+      41.7,
+      29.0,
+      20.7,
+      8.6
+    ],
+    "category": "holidays",
+    "crowd": "people who celebrate it",
+    "source": {
+      "name": "FiveThirtyEight, Thanksgiving survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+      "sample": "951 people surveyed online in the US",
+      "year": 2015
+    }
+  },
+  {
+    "id": "us-cook-yesterday",
+    "text": "Did you cook or clean up after a meal yesterday?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      65.2,
+      34.8
+    ],
+    "category": "food",
+    "crowd": "Americans",
+    "source": {
+      "name": "US Bureau of Labor Statistics, American Time Use Survey, Table 1",
+      "url": "https://www.bls.gov/news.release/atus.t01.htm",
+      "licence": "Public domain",
+      "licenceUrl": "https://www.bls.gov/opub/copyright-information.htm",
+      "dataUrl": null,
+      "sample": "People aged 15 and over in the US, share active on an average day",
+      "year": 2025
+    }
+  },
+  {
+    "id": "sw-jar-jar",
+    "text": "How do you feel about Jar Jar Binks?",
+    "options": [
+      "Very favorably",
+      "Somewhat favorably",
+      "Neutral",
+      "Somewhat unfavorably",
+      "Very unfavorably",
+      "Who?"
+    ],
+    "pcts": [
+      13.6,
+      15.8,
+      20.0,
+      12.4,
+      24.9,
+      13.3
+    ],
+    "category": "culture",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, Star Wars survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/star-wars-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/star-wars-survey/StarWars.csv",
+      "sample": "821 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "fly-recline-rude",
+    "text": "Is it rude to recline your seat on a plane?",
+    "options": [
+      "Not rude at all",
+      "Somewhat rude",
+      "Very rude"
+    ],
+    "pcts": [
+      58.8,
+      32.9,
+      8.3
+    ],
+    "category": "manners",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "854 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "eu-subtitles",
+    "text": "Films in another language: do you prefer subtitles?",
+    "options": [
+      "Yes, subtitles",
+      "No"
+    ],
+    "pcts": [
+      53.0,
+      47.0
+    ],
+    "category": "culture",
+    "crowd": "Europeans",
+    "source": {
+      "name": "European Commission, Special Eurobarometer, Europeans and their languages",
+      "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_24_2686/IP_24_2686_EN.pdf",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://data.europa.eu/copyright-notice",
+      "dataUrl": null,
+      "sample": "26,523 people aged 15 and over in the EU",
+      "year": 2023
+    }
+  },
+  {
+    "id": "weather-daily",
+    "text": "Do you check the weather forecast every day?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      80.4,
+      19.6
+    ],
+    "category": "home",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, weather survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/weather-check",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/weather-check/weather-check.csv",
+      "sample": "928 people surveyed online in the US",
+      "year": 2015
+    }
+  },
+  {
+    "id": "tg-main-dish",
+    "text": "What is the main dish at your Thanksgiving dinner?",
+    "options": [
+      "Turkey",
+      "Ham or pork",
+      "Tofurkey",
+      "Other"
+    ],
+    "pcts": [
+      88.2,
+      3.0,
+      2.0,
+      6.8
+    ],
+    "category": "holidays",
+    "crowd": "people who celebrate it",
+    "source": {
+      "name": "FiveThirtyEight, Thanksgiving survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+      "sample": "974 people surveyed online in the US",
+      "year": 2015
+    }
+  },
+  {
+    "id": "data-wondered",
+    "text": "Have you ever stopped to wonder if “data” is singular or plural?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      49.9,
+      50.1
+    ],
+    "category": "language",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, comma survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/comma-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/comma-survey/comma-survey.csv",
+      "sample": "1,091 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "us-exercise-yesterday",
+    "text": "Did you play a sport or exercise yesterday?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      23.4,
+      76.6
+    ],
+    "category": "leisure",
+    "crowd": "Americans",
+    "source": {
+      "name": "US Bureau of Labor Statistics, American Time Use Survey, Table 1",
+      "url": "https://www.bls.gov/news.release/atus.t01.htm",
+      "licence": "Public domain",
+      "licenceUrl": "https://www.bls.gov/opub/copyright-information.htm",
+      "dataUrl": null,
+      "sample": "People aged 15 and over in the US, share active on an average day",
+      "year": 2025
+    }
+  },
+  {
+    "id": "fly-shade",
+    "text": "Who controls the window shade in your row?",
+    "options": [
+      "Everyone gets a say",
+      "The window seat"
+    ],
+    "pcts": [
+      57.8,
+      42.2
+    ],
+    "category": "manners",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "856 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "trek-fan",
+    "text": "Are you a Star Trek fan?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      40.0,
+      60.0
+    ],
+    "category": "culture",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, Star Wars survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/star-wars-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/star-wars-survey/StarWars.csv",
+      "sample": "1,068 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "pew-tip-pool",
+    "text": "In a restaurant, how should tips be shared?",
+    "options": [
+      "Each server keeps their own",
+      "Pooled for all staff",
+      "Pooled among servers"
+    ],
+    "pcts": [
+      72,
+      14,
+      13
+    ],
+    "category": "money",
+    "crowd": "Americans",
+    "source": {
+      "name": "Pew Research Center, Tipping Culture in America",
+      "url": "https://www.pewresearch.org/2023/11/09/how-americans-feel-about-the-basics-of-tipping/",
+      "licence": "Quoted with attribution, Pew Research Center use policy",
+      "licenceUrl": "https://www.pewresearch.org/about/use-policy/",
+      "dataUrl": null,
+      "sample": "11,945 US adults",
+      "year": 2023
+    }
+  },
+  {
+    "id": "tg-stuffing",
+    "text": "What kind of stuffing do you have at Thanksgiving?",
+    "options": [
+      "Bread-based",
+      "Rice-based",
+      "None",
+      "Other"
+    ],
+    "pcts": [
+      85.8,
+      4.3,
+      6.2,
+      3.7
+    ],
+    "category": "food",
+    "crowd": "people who celebrate it",
+    "source": {
+      "name": "FiveThirtyEight, Thanksgiving survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+      "sample": "974 people surveyed online in the US",
+      "year": 2015
+    }
+  },
+  {
+    "id": "ew-commute",
+    "text": "How do you usually get to work?",
+    "options": [
+      "Drive",
+      "Work from home",
+      "Walk",
+      "Bus, train or metro",
+      "Something else"
+    ],
+    "pcts": [
+      45.1,
+      31.2,
+      7.6,
+      7.9,
+      8.2
+    ],
+    "category": "travel",
+    "crowd": "workers in England and Wales",
+    "source": {
+      "name": "Office for National Statistics, Census 2021, method used to travel to work (TS061)",
+      "url": "https://www.ons.gov.uk/datasets/TS061/editions/2021/versions/1",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "dataUrl": null,
+      "sample": "Employed residents aged 16 and over in England and Wales, census day 2021",
+      "year": 2021
+    }
+  },
+  {
+    "id": "oxford-heard",
+    "text": "Before today, had you heard of the Oxford comma?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      59.6,
+      40.4
+    ],
+    "category": "language",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, comma survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/comma-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/comma-survey/comma-survey.csv",
+      "sample": "1,099 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "fly-empty-seat",
+    "text": "Is it rude to move to an empty seat you did not pay for?",
+    "options": [
+      "Not rude at all",
+      "Somewhat rude",
+      "Very rude"
+    ],
+    "pcts": [
+      80.7,
+      15.0,
+      4.3
+    ],
+    "category": "manners",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "855 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "us-socialize-yesterday",
+    "text": "Did you spend time socializing with someone yesterday?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      30.4,
+      69.6
+    ],
+    "category": "social",
+    "crowd": "Americans",
+    "source": {
+      "name": "US Bureau of Labor Statistics, American Time Use Survey, Table 1",
+      "url": "https://www.bls.gov/news.release/atus.t01.htm",
+      "licence": "Public domain",
+      "licenceUrl": "https://www.bls.gov/opub/copyright-information.htm",
+      "dataUrl": null,
+      "sample": "People aged 15 and over in the US, share active on an average day",
+      "year": 2025
+    }
+  },
+  {
+    "id": "south-maryland",
+    "text": "Is Maryland part of the South?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      6.4,
+      93.6
+    ],
+    "category": "culture",
+    "crowd": "people in the US",
+    "source": {
+      "name": "FiveThirtyEight, regions survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/region-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/region-survey/SOUTH.csv",
+      "sample": "2,528 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "tg-black-friday",
+    "text": "Do you hit the Black Friday sales on Thanksgiving Day itself?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      23.6,
+      76.4
+    ],
+    "category": "money",
+    "crowd": "people who celebrate it",
+    "source": {
+      "name": "FiveThirtyEight, Thanksgiving survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+      "sample": "951 people surveyed online in the US",
+      "year": 2015
+    }
+  },
+  {
+    "id": "eu-work-from-home",
+    "text": "How often do you work from home?",
+    "options": [
+      "Usually",
+      "Sometimes",
+      "Never"
+    ],
+    "pcts": [
+      9.0,
+      14.1,
+      76.9
+    ],
+    "category": "work",
+    "crowd": "workers in the EU",
+    "source": {
+      "name": "Eurostat, employed persons working from home (lfsa_ehomp)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsa_ehomp/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": null,
+      "sample": "Employed people aged 15 and over in the EU",
+      "year": 2025
+    }
+  },
+  {
+    "id": "sw-seen",
+    "text": "Have you seen any Star Wars film?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      78.9,
+      21.1
+    ],
+    "category": "culture",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, Star Wars survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/star-wars-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/star-wars-survey/StarWars.csv",
+      "sample": "1,186 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "fly-owe",
+    "text": "If you recline, do you owe anything to the person behind you?",
+    "options": [
+      "Yes, if they ask me not to",
+      "No, nothing"
+    ],
+    "pcts": [
+      63.6,
+      36.4
+    ],
+    "category": "manners",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "854 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "us-housework-yesterday",
+    "text": "Did you do any housework yesterday?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      36.1,
+      63.9
+    ],
+    "category": "home",
+    "crowd": "Americans",
+    "source": {
+      "name": "US Bureau of Labor Statistics, American Time Use Survey, Table 1",
+      "url": "https://www.bls.gov/news.release/atus.t01.htm",
+      "licence": "Public domain",
+      "licenceUrl": "https://www.bls.gov/opub/copyright-information.htm",
+      "dataUrl": null,
+      "sample": "People aged 15 and over in the US, share active on an average day",
+      "year": 2025
+    }
+  },
+  {
+    "id": "oxford-care",
+    "text": "How much do you care about the Oxford comma?",
+    "options": [
+      "A lot",
+      "Some",
+      "Not much",
+      "Not at all"
+    ],
+    "pcts": [
+      26.5,
+      37.7,
+      24.4,
+      11.4
+    ],
+    "category": "language",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, comma survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/comma-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/comma-survey/comma-survey.csv",
+      "sample": "1,099 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "fly-chat",
+    "text": "Is it rude to say more than a few words to the stranger next to you on a plane?",
+    "options": [
+      "Not rude at all",
+      "Somewhat rude",
+      "Very rude"
+    ],
+    "pcts": [
+      78.9,
+      17.9,
+      3.2
+    ],
+    "category": "manners",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "855 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "us-shopping-yesterday",
+    "text": "Did you buy anything yesterday, in a shop or online?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      39.7,
+      60.3
+    ],
+    "category": "money",
+    "crowd": "Americans",
+    "source": {
+      "name": "US Bureau of Labor Statistics, American Time Use Survey, Table 1",
+      "url": "https://www.bls.gov/news.release/atus.t01.htm",
+      "licence": "Public domain",
+      "licenceUrl": "https://www.bls.gov/opub/copyright-information.htm",
+      "dataUrl": null,
+      "sample": "People aged 15 and over in the US, share active on an average day",
+      "year": 2025
+    }
+  },
+  {
+    "id": "midwest-pennsylvania",
+    "text": "Is Pennsylvania part of the Midwest?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      4.3,
+      95.7
+    ],
+    "category": "culture",
+    "crowd": "people in the US",
+    "source": {
+      "name": "FiveThirtyEight, regions survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/region-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/region-survey/MIDWEST.csv",
+      "sample": "2,778 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "fly-armrest-two",
+    "text": "In a row of two seats, who gets the middle armrest?",
+    "options": [
+      "Shared",
+      "First to rest an arm",
+      "Aisle seat",
+      "Window seat",
+      "Other"
+    ],
+    "pcts": [
+      68.1,
+      15.4,
+      7.4,
+      4.8,
+      4.3
+    ],
+    "category": "manners",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "856 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "tg-celebrate",
+    "text": "Do you celebrate Thanksgiving?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      92.6,
+      7.4
+    ],
+    "category": "holidays",
+    "crowd": "people in the US",
+    "source": {
+      "name": "FiveThirtyEight, Thanksgiving survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv",
+      "sample": "1,058 people surveyed online in the US",
+      "year": 2015
+    }
+  },
+  {
+    "id": "us-garden-yesterday",
+    "text": "Did you do any gardening or lawn care yesterday?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      10.0,
+      90.0
+    ],
+    "category": "home",
+    "crowd": "Americans",
+    "source": {
+      "name": "US Bureau of Labor Statistics, American Time Use Survey, Table 1",
+      "url": "https://www.bls.gov/news.release/atus.t01.htm",
+      "licence": "Public domain",
+      "licenceUrl": "https://www.bls.gov/opub/copyright-information.htm",
+      "dataUrl": null,
+      "sample": "People aged 15 and over in the US, share active on an average day",
+      "year": 2025
+    }
+  },
+  {
+    "id": "fly-swap-friends",
+    "text": "Is it rude to ask a stranger to swap seats so you can sit with friends?",
+    "options": [
+      "Not rude at all",
+      "Somewhat rude",
+      "Very rude"
+    ],
+    "pcts": [
+      74.2,
+      21.7,
+      4.1
+    ],
+    "category": "manners",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "850 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "fly-wake-walk",
+    "text": "Is it rude to wake your seatmate just to walk around?",
+    "options": [
+      "Not rude at all",
+      "Somewhat rude",
+      "Very rude"
+    ],
+    "pcts": [
+      26.6,
+      52.5,
+      20.9
+    ],
+    "category": "manners",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "850 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "fly-ban",
+    "text": "Should reclining seats be banned on planes?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      30.3,
+      69.7
+    ],
+    "category": "travel",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "854 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "fly-phone-takeoff",
+    "text": "Have you ever used a device at takeoff after the crew said not to?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      16.0,
+      84.0
+    ],
+    "category": "travel",
+    "crowd": "flyers",
+    "source": {
+      "name": "FiveThirtyEight, Flying Etiquette Survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/flying-etiquette-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
+      "sample": "849 people surveyed online in the US",
+      "year": null
+    }
+  }
+]

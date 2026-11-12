@@ -1,0 +1,408 @@
+/*
+ * Are You Normal? visual system.
+ * Sources: Isotype pictorial statistics (Otto and Marie Neurath, Gerd Arntz)
+ * and mid-century census forms: counted figures, ruled rows, tick boxes, a stamp.
+ */
+
+:root {
+  --paper: #ffffff;
+  --ink: #121212;
+  --ink-2: #4a4a4a;
+  --ink-3: #6b6b6b;
+  --rule: #121212;
+  --hair: #d9dbe0;
+  --empty: #d5d8de;
+  --red: #e2361c;
+  --red-text: #c42b14;
+  --blue: #1f48b8;
+  --blue-text: #1f48b8;
+  --stamp: #d42a12;
+  --focus: #1f48b8;
+  --shade: rgba(18, 18, 18, 0.04);
+
+  --font:
+    'Jost Variable', 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+  --pad: 20px;
+  --max: 480px;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 -6 4.1'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --paper: #111214;
+    --ink: #f2f2ef;
+    --ink-2: #b4b6ba;
+    --ink-3: #8d9096;
+    --rule: #f2f2ef;
+    --hair: #2c2f35;
+    --empty: #33363d;
+    --red: #ff5a3d;
+    --red-text: #ff7a62;
+    --blue: #6f94ff;
+    --blue-text: #8eaaff;
+    --stamp: #ff5a3d;
+    --focus: #8eaaff;
+    --shade: rgba(242, 242, 239, 0.05);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --paper: #111214;
+  --ink: #f2f2ef;
+  --ink-2: #b4b6ba;
+  --ink-3: #8d9096;
+  --rule: #f2f2ef;
+  --hair: #2c2f35;
+  --empty: #33363d;
+  --red: #ff5a3d;
+  --red-text: #ff7a62;
+  --blue: #6f94ff;
+  --blue-text: #8eaaff;
+  --stamp: #ff5a3d;
+  --focus: #8eaaff;
+  --shade: rgba(242, 242, 239, 0.05);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.num {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* ---------- Masthead ---------- */
+
+.masthead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0 10px;
+  border-bottom: 3px solid var(--rule);
+}
+
+.wordmark {
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.wordmark b {
+  color: var(--red);
+  font-weight: 800;
+}
+
+.edition {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.edition strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.kicker svg {
+  width: 20px;
+  height: 20px;
+  color: var(--ink);
+  flex: none;
+}
+
+.question {
+  margin: 10px 0 18px;
+  font-weight: 600;
+  font-size: clamp(23px, 6.6vw, 30px);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+.asked-by {
+  color: var(--ink-2);
+  font-size: 13px;
+  margin: -10px 0 16px;
+}
+
+/* ---------- Census form rows ---------- */
+
+.form {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.form li {
+  border-top: 1px solid var(--rule);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 26px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 52px;
+  padding: 8px 4px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 450;
+  transition: background-color 120ms linear;
+}
+
+.row:hover:not(:disabled) {
+  background: var(--shade);
+}
+
+.row .box {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--ink);
+}
+
+.row .box svg {
+  position: absolute;
+  inset: -9px -10px -6px -4px;
+  width: 34px;
+  height: 34px;
+  overflow: visible;
+}
+
+.row .box path {
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+}
+
+.row[aria-pressed='true'] .box path {
+  animation: tick 220ms var(--ease-out) forwards;
+}
+
+.row[aria-pressed='true'] {
+  font-weight: 600;
+}
+
+.row .key {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+
+.form.compact .row {
+  min-height: 40px;
+  padding: 5px 2px;
+  font-size: 16px;
+  gap: 12px;
+  grid-template-columns: 22px 1fr auto;
+}
+
+.form.compact .row .box {
+  width: 18px;
+  height: 18px;
+}
+
+.form.compact .row .box svg {
+  inset: -8px -9px -5px -4px;
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes tick {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 54px;
+  padding: 0 18px;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: transform 80ms linear;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  background: var(--empty);
+  color: var(--ink-3);
+}
+
+.btn .arrow {
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+}
+
+.link {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Figures ---------- */
+
+.fig-empty {
+  fill: var(--empty);
+}
+.fig-ink {
+  fill: var(--ink);
+}
+.fig-red {
+  fill: var(--red);
+}
+.fig-blue {
+  fill: var(--blue);
+}
+
+/* ---------- Stamp ---------- */
+
+.stamp {
+  display: inline-block;
+  padding: 5px 12px 3px;
+  border: 3px solid var(--stamp);
+  outline: 1.5px solid var(--stamp);
+  outline-offset: 2px;
+  color: var(--stamp);
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+  mask-image: var(--grain);
+  -webkit-mask-image: var(--grain);
+  mask-size: 160px 160px;
+  -webkit-mask-size: 160px 160px;
+}
+
+.stamp.big {
+  font-size: 44px;
+  padding: 8px 16px 5px;
+  border-width: 4px;
+}
+
+.stamp.drop {
+  animation: stamp 260ms cubic-bezier(0.3, 1.5, 0.5, 1) both;
+}
+
+@keyframes stamp {
+  0% {
+    opacity: 0;
+    transform: rotate(-12deg) scale(1.9);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-7deg) scale(1);
+  }
+}
+
+/* ---------- Motion preferences ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 1ms !important;
+  }
+}
