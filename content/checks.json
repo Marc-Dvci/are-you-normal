@@ -737,5 +737,200 @@
       "left handed": 0,
       "right handed": 1
     }
+  },
+  {
+    "id": "yps-rats",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 69,
+    "column": "Rats",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-dogs",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 71,
+    "column": "Dangerous dogs",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-big-dogs",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 125,
+    "column": "Small - big dogs",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-patient",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 109,
+    "column": "Waiting",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-surveys",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 131,
+    "column": "Questionnaires or polls",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-dreams",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 104,
+    "column": "Dreams",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-new-people",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 113,
+    "column": "Socializing",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-achievements",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 114,
+    "column": "Achievements",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-promises",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 83,
+    "column": "Keeping promises",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-techno",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 17,
+    "column": "Techno, Trance",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-celebrities",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 56,
+    "column": "Celebrities",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-poetry",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 52,
+    "column": "Writing",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-song-tempo",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 1,
+    "column": "Slow songs or fast songs",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
   }
 ]

@@ -1711,5 +1711,793 @@
       "sample": "849 people surveyed online in the US",
       "year": null
     }
+  },
+  {
+    "id": "eu-food-delivery",
+    "text": "Have you ordered a food delivery online in the last 3 months?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      19.8,
+      80.2
+    ],
+    "category": "food",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, ICT usage in households and by individuals (isoc_ec_ibgs)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ec_ibgs/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ec_ibgs?format=JSON&lang=EN&time=2024",
+      "sample": "People aged 16 to 74 in the EU",
+      "year": 2024
+    }
+  },
+  {
+    "id": "yps-song-tempo",
+    "text": "Slow songs or fast songs?",
+    "options": [
+      "Slow",
+      "Both the same",
+      "Fast"
+    ],
+    "pcts": [
+      8.8,
+      57.6,
+      33.6
+    ],
+    "category": "culture",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,008 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "ew-bedrooms",
+    "text": "How many bedrooms does your home have?",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four or more"
+    ],
+    "pcts": [
+      11.4,
+      27.1,
+      40.4,
+      21.1
+    ],
+    "category": "home",
+    "crowd": "homes in England and Wales",
+    "source": {
+      "name": "Office for National Statistics, Census 2021 (TS050)",
+      "url": "https://www.ons.gov.uk/datasets/TS050/editions/2021/versions/1",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "dataUrl": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2068_1.data.csv?geography=K04000001&measures=20100",
+      "sample": "All 24,783,199 households in England and Wales",
+      "year": 2021
+    }
+  },
+  {
+    "id": "eu-podcast",
+    "text": "Have you listened to a podcast in the last 3 months?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      27.8,
+      72.2
+    ],
+    "category": "culture",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, ICT usage in households and by individuals (isoc_ci_ac_i)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_ac_i/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ci_ac_i?format=JSON&lang=EN&time=2024",
+      "sample": "People aged 16 to 74 in the EU",
+      "year": 2024
+    }
+  },
+  {
+    "id": "yps-surveys",
+    "text": "Do you enjoy taking part in surveys?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      39.0,
+      39.5,
+      21.5
+    ],
+    "category": "social",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,006 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "eu-home-type",
+    "text": "What kind of home do you live in?",
+    "options": [
+      "Detached house",
+      "Semi-detached house",
+      "Flat or apartment",
+      "Something else"
+    ],
+    "pcts": [
+      34.8,
+      16.7,
+      47.8,
+      0.7
+    ],
+    "category": "home",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, distribution of population by dwelling type (ilc_lvho01)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho01/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho01?format=JSON&lang=EN&time=2025",
+      "sample": "Population of the EU",
+      "year": 2025
+    }
+  },
+  {
+    "id": "nl-holiday",
+    "text": "Did you go on holiday last year, with at least one night away?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      78.2,
+      21.8
+    ],
+    "category": "holidays",
+    "crowd": "Dutch people",
+    "source": {
+      "name": "Statistics Netherlands (CBS), holidays of Dutch residents, participation (84364NED)",
+      "url": "https://opendata.cbs.nl/statline/#/CBS/nl/dataset/84364NED/table",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://www.cbs.nl/en-gb/about-us/website/copyright",
+      "dataUrl": "https://opendata.cbs.nl/ODataApi/odata/84364NED/TypedDataSet",
+      "sample": "Residents of the Netherlands aged 15 and over",
+      "year": 2025
+    }
+  },
+  {
+    "id": "yps-big-dogs",
+    "text": "Do you prefer big, fierce dogs to small, calm ones?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      30.6,
+      38.3,
+      31.1
+    ],
+    "category": "pets",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,006 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "eu-sell-online",
+    "text": "Have you sold anything online in the last 3 months?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      23.9,
+      76.1
+    ],
+    "category": "money",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, ICT usage in households and by individuals (isoc_ci_ac_i)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_ac_i/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ci_ac_i?format=JSON&lang=EN&time=2025",
+      "sample": "People aged 16 to 74 in the EU",
+      "year": 2025
+    }
+  },
+  {
+    "id": "ew-household-size",
+    "text": "How many people live in your home, you included?",
+    "options": [
+      "Just me",
+      "Two",
+      "Three",
+      "Four",
+      "Five or more"
+    ],
+    "pcts": [
+      30.2,
+      34.1,
+      16.0,
+      12.8,
+      6.9
+    ],
+    "category": "home",
+    "crowd": "homes in England and Wales",
+    "source": {
+      "name": "Office for National Statistics, Census 2021 (TS017)",
+      "url": "https://www.ons.gov.uk/datasets/TS017/editions/2021/versions/1",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "dataUrl": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2037_1.data.csv?geography=K04000001&measures=20100",
+      "sample": "All 24,783,199 households in England and Wales",
+      "year": 2021
+    }
+  },
+  {
+    "id": "yps-dreams",
+    "text": "Do you always have good dreams?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      7.0,
+      58.5,
+      34.5
+    ],
+    "category": "sleep",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,010 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "eu-music-sub",
+    "text": "Do you pay for a music streaming service?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      19.4,
+      80.6
+    ],
+    "category": "culture",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, ICT usage in households and by individuals (isoc_ec_ibgs)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ec_ibgs/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ec_ibgs?format=JSON&lang=EN&time=2024",
+      "sample": "People aged 16 to 74 in the EU",
+      "year": 2024
+    }
+  },
+  {
+    "id": "eu-commute-time",
+    "text": "How long does your trip to work take?",
+    "options": [
+      "Under 15 minutes",
+      "15 to 29 minutes",
+      "30 to 44 minutes",
+      "45 minutes or more"
+    ],
+    "pcts": [
+      32.9,
+      32.7,
+      20.3,
+      14.1
+    ],
+    "category": "work",
+    "crowd": "workers in the EU",
+    "source": {
+      "name": "Eurostat, employed persons by commuting time (lfso_19plwk28)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lfso_19plwk28/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfso_19plwk28?format=JSON&lang=EN",
+      "sample": "Employed people aged 15 to 74 in the EU who gave a commuting time",
+      "year": 2019
+    }
+  },
+  {
+    "id": "yps-rats",
+    "text": "Are you afraid of rats and mice?",
+    "options": [
+      "Not afraid",
+      "A bit afraid",
+      "Very afraid"
+    ],
+    "pcts": [
+      56.9,
+      18.7,
+      24.4
+    ],
+    "category": "home",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,007 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "se-reading",
+    "text": "How often do you read a book?",
+    "options": [
+      "Every week",
+      "Every month",
+      "Less often",
+      "Not at all"
+    ],
+    "pcts": [
+      24,
+      14,
+      23,
+      39
+    ],
+    "category": "culture",
+    "crowd": "Swedes",
+    "source": {
+      "name": "Statistics Sweden (SCB), book reading 1982 to 2024, Living Conditions Survey",
+      "url": "https://www.scb.se/contentassets/c9eb08536d6d41f8894e2048d40235a9/le0101_2024a01_br_lebr2507.pdf",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://www.scb.se/en/About-us/about-the-website-and-terms-of-use/",
+      "dataUrl": null,
+      "sample": "People aged 16 and over in Sweden, books read in the last 12 months",
+      "year": 2024
+    }
+  },
+  {
+    "id": "eu-chat-apps",
+    "text": "Do you use chat apps like WhatsApp or Messenger?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      82.3,
+      17.7
+    ],
+    "category": "tech",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, ICT usage in households and by individuals (isoc_ci_ac_i)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_ac_i/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ci_ac_i?format=JSON&lang=EN&time=2025",
+      "sample": "People aged 16 to 74 in the EU",
+      "year": 2025
+    }
+  },
+  {
+    "id": "yps-achievements",
+    "text": "Do you always let people know about your achievements?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      27.4,
+      46.6,
+      26.0
+    ],
+    "category": "social",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,008 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "ew-cars",
+    "text": "How many cars or vans does your household have?",
+    "options": [
+      "None",
+      "One",
+      "Two",
+      "Three or more"
+    ],
+    "pcts": [
+      23.3,
+      41.3,
+      26.2,
+      9.2
+    ],
+    "category": "travel",
+    "crowd": "homes in England and Wales",
+    "source": {
+      "name": "Office for National Statistics, Census 2021 (TS045)",
+      "url": "https://www.ons.gov.uk/datasets/TS045/editions/2021/versions/1",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "dataUrl": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2063_1.data.csv?geography=K04000001&measures=20100",
+      "sample": "All 24,783,199 households in England and Wales",
+      "year": 2021
+    }
+  },
+  {
+    "id": "eu-private-host",
+    "text": "In the last 3 months, did you book a stay with a private host online?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      10.8,
+      89.2
+    ],
+    "category": "holidays",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, ICT usage in households and by individuals (isoc_ec_ce_i)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ec_ce_i/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ec_ce_i?format=JSON&lang=EN&time=2025",
+      "sample": "People aged 16 to 74 in the EU",
+      "year": 2025
+    }
+  },
+  {
+    "id": "yps-techno",
+    "text": "Do you enjoy techno or trance music?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      58.5,
+      19.4,
+      22.1
+    ],
+    "category": "culture",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,003 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "eu-clothes-online",
+    "text": "Have you bought clothes or shoes online in the last 3 months?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      42.3,
+      57.7
+    ],
+    "category": "money",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, ICT usage in households and by individuals (isoc_ec_ibgs)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ec_ibgs/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ec_ibgs?format=JSON&lang=EN&time=2024",
+      "sample": "People aged 16 to 74 in the EU",
+      "year": 2024
+    }
+  },
+  {
+    "id": "ew-second-address",
+    "text": "Do you have a second address where you stay part of the time?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      5.3,
+      94.7
+    ],
+    "category": "home",
+    "crowd": "people in England and Wales",
+    "source": {
+      "name": "Office for National Statistics, Census 2021 (TS056)",
+      "url": "https://www.ons.gov.uk/datasets/TS056/editions/2021/versions/1",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "dataUrl": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2074_1.data.csv?geography=K04000001&measures=20100",
+      "sample": "All 59,597,542 usual residents of England and Wales",
+      "year": 2021
+    }
+  },
+  {
+    "id": "yps-patient",
+    "text": "Are you a very patient person?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      42.3,
+      39.1,
+      18.6
+    ],
+    "category": "social",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,007 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "eu-online-games",
+    "text": "Do you play games online?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      31.3,
+      68.7
+    ],
+    "category": "leisure",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, ICT usage in households and by individuals (isoc_ci_ac_i)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_ac_i/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ci_ac_i?format=JSON&lang=EN&time=2024",
+      "sample": "People aged 16 to 74 in the EU",
+      "year": 2024
+    }
+  },
+  {
+    "id": "se-audiobooks",
+    "text": "Have you listened to an audiobook in the last 12 months?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      31.5,
+      68.5
+    ],
+    "category": "culture",
+    "crowd": "Swedes",
+    "source": {
+      "name": "Statistics Sweden (SCB), Living Conditions Surveys, leisure activities (LE01012021F01)",
+      "url": "https://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__LE__LE0101__LE0101F/LE01012021F01/",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://www.scb.se/en/About-us/about-the-website-and-terms-of-use/",
+      "dataUrl": "https://api.scb.se/OV0104/v1/doris/en/ssd/LE/LE0101/LE0101F/LE01012021F01",
+      "sample": "Residents of Sweden aged 16 and over",
+      "year": 2025
+    }
+  },
+  {
+    "id": "yps-celebrities",
+    "text": "Are you interested in how celebrities live?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      57.3,
+      22.5,
+      20.2
+    ],
+    "category": "leisure",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,008 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "eu-film-sub",
+    "text": "Do you pay for a film, series or sports streaming service?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      27.5,
+      72.5
+    ],
+    "category": "culture",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, ICT usage in households and by individuals (isoc_ec_ibgs)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ec_ibgs/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ec_ibgs?format=JSON&lang=EN&time=2024",
+      "sample": "People aged 16 to 74 in the EU",
+      "year": 2024
+    }
+  },
+  {
+    "id": "eu-tickets-online",
+    "text": "Have you bought event tickets online in the last 3 months?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      23.0,
+      77.0
+    ],
+    "category": "leisure",
+    "crowd": "Europeans",
+    "source": {
+      "name": "Eurostat, ICT usage in households and by individuals (isoc_ec_ibgs)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_ec_ibgs/default/table?lang=en",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://ec.europa.eu/eurostat/web/main/help/copyright-notice",
+      "dataUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ec_ibgs?format=JSON&lang=EN&time=2024",
+      "sample": "People aged 16 to 74 in the EU",
+      "year": 2024
+    }
+  },
+  {
+    "id": "yps-promises",
+    "text": "Do you always keep your promises?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      5.6,
+      20.8,
+      73.6
+    ],
+    "category": "manners",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,009 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "yps-new-people",
+    "text": "Do you enjoy meeting new people?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      25.6,
+      38.4,
+      36.0
+    ],
+    "category": "social",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,005 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "yps-dogs",
+    "text": "Are you afraid of dangerous dogs?",
+    "options": [
+      "Not afraid",
+      "A bit afraid",
+      "Very afraid"
+    ],
+    "pcts": [
+      36.4,
+      25.0,
+      38.6
+    ],
+    "category": "pets",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,009 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
+    "id": "yps-poetry",
+    "text": "Do you enjoy writing poetry?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      73.5,
+      11.2,
+      15.3
+    ],
+    "category": "culture",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,004 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
   }
 ]
