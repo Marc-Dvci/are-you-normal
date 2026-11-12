@@ -106,18 +106,9 @@ Questions stay on everyday habits, manners and tastes. The game keeps away from 
 
 ## How it works
 
-```
-Feed post (inline, splash.html)          Full game (expanded, game.html)
-  first question, tap to answer   --->     guess on a 10 x 10 crowd, reveal, day card
-            |                                         |
-            +------------- /api (Hono) ---------------+
-                              |
-         Devvit Redis: votes, guesses, scores, streaks, proposals
-         Devvit realtime: live subreddit counts on open reveals
-         Devvit scheduler: a new edition each day
-         Reddit API: daily post, results thread, comments as the player
-         Devvit Journeys: start, progress, interactions, end with score
-```
+![Architecture: the feed card and game view on Reddit call the Devvit Web server's Hono routes, which hold the rules and the question bank and use Redis, realtime, the scheduler and Journeys. The survey share stays on the server until the guess is locked.](docs/architecture.png)
+
+The diagram source is [`docs/architecture.html`](docs/architecture.html).
 
 - `src/shared/` holds the rules: scoring, tiers and verdict lines, edition dates, the subreddit-versus-survey line, proposal checks.
 - `src/server/core/` runs editions, votes, guesses, streaks, proposals and comments.

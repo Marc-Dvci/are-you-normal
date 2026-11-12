@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Are You Normal? architecture</title>
+<style>
+  @font-face {
+    font-family: Jost;
+    src: url('../node_modules/@fontsource-variable/jost/files/jost-latin-wght-normal.woff2') format('woff2');
+    font-weight: 100 900;
+  }
+  :root { --ink: #121212; --ink-2: #4a4a4a; --ink-3: #6b6b6b; --red: #e2361c; --blue: #1f48b8; --rule: #d9d9d6; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fff; color: var(--ink); font-family: Jost, 'Segoe UI', sans-serif; width: 840px; padding: 28px 28px 24px; }
+  h1 { font-size: 15px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; border-bottom: 3px solid var(--ink); padding-bottom: 8px; display: flex; justify-content: space-between; }
+  h1 span { color: var(--ink-3); font-weight: 600; }
+  h1 em, h1 i { font-style: normal; }
+  .row { display: grid; grid-template-columns: 1fr 34px 1fr 34px 1fr; align-items: stretch; margin-top: 18px; }
+  .col h2 { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--ink-2); margin-bottom: 8px; }
+  .item { border-top: 1.5px solid var(--ink); padding: 8px 0 9px; }
+  .item:last-child { border-bottom: 1.5px solid var(--ink); }
+  .item b { display: block; font-size: 16px; font-weight: 600; }
+  .item small { display: block; font-size: 14px; color: var(--ink-2); line-height: 1.3; margin-top: 2px; }
+  .arrow { display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--ink-3); }
+  .red { color: var(--red); } .blue { color: var(--blue); }
+  .rule { margin-top: 18px; border-left: 4px solid var(--red); padding: 4px 0 4px 12px; font-size: 15px; line-height: 1.35; }
+  .day { margin-top: 18px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .day div { border-top: 1.5px solid var(--ink); padding: 8px 10px 0 0; font-size: 14px; line-height: 1.3; color: var(--ink-2); }
+  .day div b { display: block; color: var(--ink); font-size: 14px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+  <h1><em>Are you normal<i class="red">?</i></em> <span>How it works</span></h1>
+  <div class="row">
+    <div class="col">
+      <h2>On Reddit</h2>
+      <div class="item"><b>Feed card</b><small>Inline post, first question, one tap to answer</small></div>
+      <div class="item"><b>Game view</b><small>Guess on a crowd of 100, reveal, stamp, day card</small></div>
+      <div class="item"><b>Comments</b><small>Results thread, verdicts and proposals as the player</small></div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="col">
+      <h2>Devvit Web server</h2>
+      <div class="item"><b>/api routes, Hono</b><small>State, answer, guess, verdict, flair, join, propose</small></div>
+      <div class="item"><b>Rules in code</b><small>Scoring, tiers, verdict lines, the sub-versus-survey line</small></div>
+      <div class="item"><b>Question bank</b><small>112 cited questions with source, sample and licence</small></div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="col">
+      <h2>Devvit services</h2>
+      <div class="item"><b>Redis</b><small>Votes, guesses, scores, ranks, streaks</small></div>
+      <div class="item"><b>Realtime</b><small><span class="blue">Live subreddit counts</span> on open reveals</small></div>
+      <div class="item"><b>Scheduler and Journeys</b><small>A new edition at 00:01 UTC; start, progress, end events</small></div>
+    </div>
+  </div>
+  <p class="rule">The survey share stays on the server until the player locks a guess. Only the guess is scored, never the answer.</p>
+  <div class="day">
+    <div><b>00:01 UTC</b>The scheduler posts the new edition and its results thread</div>
+    <div><b>Fallback</b>The moderator menu or the first visit posts it; a lock keeps one post a day</div>
+    <div><b>All day</b>Players answer, guess and compare with the survey</div>
+    <div><b>Next night</b>The app posts the final count and runs the top proposal</div>
+  </div>
+</body>
+</html>
