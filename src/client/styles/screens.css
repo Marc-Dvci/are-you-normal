@@ -239,10 +239,6 @@
   color: var(--ink-2);
 }
 
-.compare dt .n::after {
-  content: ' players';
-}
-
 .compare dd {
   margin: 0;
   display: flex;

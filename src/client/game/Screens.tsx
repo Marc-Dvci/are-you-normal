@@ -8,7 +8,7 @@ import type {
 } from '../../shared/types';
 import { CrowdGrid } from '../ui/CrowdGrid';
 import { FigureRow } from '../ui/Figure';
-import { ordinal, pctText } from '../lib/format';
+import { count, ordinal, pctText } from '../lib/format';
 import { AnswerRows, Countdown, Kicker, Stamp } from '../ui/Parts';
 
 const topicOf = (q: PublicQuestion) =>
@@ -162,7 +162,8 @@ const SourceLine = ({
   if (!source) {
     return (
       <p className="source">
-        Source: players of this subreddit, {reveal.sub.n} answers so far.
+        Source: players of this subreddit, {count(reveal.sub.n, 'answer')} so
+        far.
       </p>
     );
   }
@@ -257,7 +258,8 @@ export const RevealScreen = ({
         )}
         <div>
           <dt>
-            This sub <span className="n num">{reveal.sub.n}</span>
+            This sub{' '}
+            <span className="n num">{count(reveal.sub.n, 'player')}</span>
           </dt>
           <dd>
             <FigureRow
