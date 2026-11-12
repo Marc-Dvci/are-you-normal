@@ -476,11 +476,18 @@
 
 .splash-verdict {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 18px;
+  gap: 22px 18px;
 }
 
+.splash-verdict .stamp {
+  flex: none;
+}
+
+/* Beside the stamp when there is room, under it on a narrow card. */
 .splash-verdict .line {
+  flex: 1 1 11em;
   margin: 0;
   font-size: 17px;
 }

@@ -112,3 +112,28 @@ test('after playing, the feed card shows the verdict instead of the question', a
     page.getByRole('button', { name: 'See my results' })
   ).toBeVisible();
 });
+
+test('on a narrow feed card the verdict line stays inside the card', async ({
+  page,
+}) => {
+  const user = player();
+  await page.goto(`/game.html?user=${user}`);
+  for (let q = 0; q < 3; q++) await playQuestion(page, q === 2);
+  await expect(page.locator('.day-screen')).toBeVisible();
+  await page.setViewportSize({ width: 340, height: 512 });
+  await page.goto(`/splash.html?user=${user}`);
+  const line = page.locator('.splash-verdict .line');
+  await expect(line).toBeVisible();
+  // The longest stamp word, as on a "Normal" day.
+  await page.locator('.splash-verdict .stamp').evaluate((el) => {
+    el.textContent = 'Normal';
+  });
+  await line.evaluate((el) => {
+    el.textContent = 'A thoroughly normal day.';
+  });
+  const box = await line.boundingBox();
+  expect((box?.x ?? 0) + (box?.width ?? 0)).toBeLessThanOrEqual(340);
+  expect(await line.evaluate((el) => el.scrollWidth <= el.clientWidth)).toBe(
+    true
+  );
+});

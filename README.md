@@ -16,7 +16,7 @@ Every day a new post asks three everyday questions. You answer for yourself, gue
 | App listing | [developers.reddit.com/apps/areyounormaldaily](https://developers.reddit.com/apps/areyounormaldaily) |
 | Built with | Devvit Web (interactive posts, Redis, realtime, scheduler, menu actions, triggers, Journeys), TypeScript, React 19, Hono |
 | Question bank | 112 cited questions from FiveThirtyEight, the Young People Survey, the UK Food Standards Agency, Eurostat, the US Bureau of Labor Statistics, the UK Office for National Statistics, Statistics Sweden, Statistics Netherlands and Pew Research Center |
-| Tests | 282 passing, 95% of server and shared lines and 80% of branches covered, plus 7 browser tests with axe-core |
+| Tests | 282 passing, 95% of server and shared lines and 80% of branches covered, plus 8 browser tests with axe-core |
 
 [How to play](#how-to-play) · [For judges](#for-judges) · [Reddit features](#reddit-features) · [The numbers](#where-the-numbers-come-from) · [Run it](#run-it)
 
@@ -35,7 +35,7 @@ Then you can post your verdict as a reply in the day's results thread, wear your
 | Criterion | What to look at | Where it lives |
 |---|---|---|
 | Delightful UX | One tap on the feed card starts the game. The guess is a tap or a drag across a 10 × 10 Isotype crowd. A rubber stamp and a verdict line land on every reveal. | [`Splash.tsx`](src/client/splash/Splash.tsx), [`CrowdGrid.tsx`](src/client/ui/CrowdGrid.tsx), [`verdicts.ts`](src/shared/verdicts.ts) |
-| Polish | 282 unit and integration tests, 7 Playwright tests with axe-core WCAG 2.2 AA checks in light and dark mode, and every survey share recomputed from its raw data on each run. | [`tests/`](tests), [`e2e/game.spec.ts`](e2e/game.spec.ts), [`tests/content/bank.test.ts`](tests/content/bank.test.ts) |
+| Polish | 282 unit and integration tests, 8 Playwright tests with axe-core WCAG 2.2 AA checks in light and dark mode, and every survey share recomputed from its raw data on each run. | [`tests/`](tests), [`e2e/game.spec.ts`](e2e/game.spec.ts), [`tests/content/bank.test.ts`](tests/content/bank.test.ts) |
 | Reddit-y | The subreddit plays against the real world. Players reply with their verdict as themselves, wear their stamp as flair, and write tomorrow's community question as a comment the subreddit votes on. | [`compare.ts`](src/shared/compare.ts), [`share.ts`](src/server/core/share.ts), [`community.ts`](src/server/core/community.ts), [`belonging.ts`](src/server/core/belonging.ts) |
 | Daily Content | A scheduled job posts each edition and closes yesterday's with the final count. 112 cited questions plus one community question a day. | [`editions.ts`](src/server/core/editions.ts), [`close.ts`](src/server/core/close.ts), [`devvit.json`](devvit.json), [`questions.json`](src/server/content/questions.json) |
 
