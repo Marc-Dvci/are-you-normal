@@ -932,5 +932,247 @@
       "4": 2,
       "5": 2
     }
+  },
+  {
+    "id": "fsa-wash-chicken",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T147",
+    "options": [
+      [
+        "Never (%)"
+      ],
+      [
+        "Always (%)",
+        "Most of the time (%)",
+        "About half the time (%)",
+        "Occasionally (%)"
+      ],
+      [
+        "Don't know (%)"
+      ]
+    ]
+  },
+  {
+    "id": "fsa-pink-chicken",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T127",
+    "options": [
+      [
+        "Never (%)"
+      ],
+      [
+        "Always (%)",
+        "Most of the time (%)",
+        "About half the time (%)",
+        "Occasionally (%)"
+      ],
+      [
+        "I don't eat that type of meat (%)",
+        "Don't know (%)"
+      ]
+    ]
+  },
+  {
+    "id": "fsa-taste-meat",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T171",
+    "options": [
+      [
+        "How it tastes (%)"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "fsa-egg-float",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T177",
+    "options": [
+      [
+        "If it doesn't float in water (%)"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "fsa-meat-use-by",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T161",
+    "options": [
+      [
+        "I don't eat this food after its use-by date (%)"
+      ],
+      [
+        "1-2 days after the use-by date (%)"
+      ],
+      [
+        "3-4 days after the use-by date (%)",
+        "5-6 days after the use-by date (%)",
+        "1-2 weeks after the use-by date (%)",
+        "More than 2 weeks after the use-by date (%)"
+      ],
+      [
+        "Don't know / I don't ever check the use-by date of this (%)"
+      ]
+    ]
+  },
+  {
+    "id": "fsa-cheese-use-by",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T167",
+    "options": [
+      [
+        "I don't eat this food after its use-by date (%)"
+      ],
+      [
+        "1-2 days after the use-by date (%)"
+      ],
+      [
+        "3-4 days after the use-by date (%)",
+        "5-6 days after the use-by date (%)"
+      ],
+      [
+        "1-2 weeks after the use-by date (%)",
+        "More than 2 weeks after the use-by date (%)"
+      ],
+      [
+        "Don't know / I don't ever check the use-by date of this (%)"
+      ]
+    ]
+  },
+  {
+    "id": "fsa-defrost",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T139",
+    "options": [
+      [
+        "Leave the meat or fish in the fridge (%)"
+      ],
+      [
+        "Leave the meat or fish at room temperature (e.g. on the worktop on a plate, in a container or in its packaging) (%)"
+      ],
+      [
+        "Defrost the meat or fish in the microwave oven (%)"
+      ],
+      [
+        "Place the meat or fish in water (%)"
+      ],
+      [
+        "Some other way (%)",
+        "I never defrost meat or fish (%)",
+        "Don't know (%)"
+      ]
+    ]
+  },
+  {
+    "id": "fsa-leftovers",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T141",
+    "options": [
+      [
+        "I put them in the fridge (%)"
+      ],
+      [
+        "I put them in the freezer (%)"
+      ],
+      [
+        "I throw them away or put them in the food waste bin (%)"
+      ],
+      [
+        "I leave them at room temperature and eat them later the same day (%)",
+        "I leave them at room temperature and eat them the next day (%)"
+      ],
+      [
+        "I don't have leftovers (%)"
+      ]
+    ]
+  },
+  {
+    "id": "fsa-reheat",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T125",
+    "options": [
+      [
+        "Once (%)"
+      ],
+      [
+        "Twice (%)"
+      ],
+      [
+        "More than twice (%)"
+      ],
+      [
+        "Not at all (%)",
+        "Don't know (%)"
+      ]
+    ]
+  },
+  {
+    "id": "fsa-who-cooks",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T120",
+    "options": [
+      [
+        "I do all or most of the food preparation and cooking (%)"
+      ],
+      [
+        "I share the responsibility with someone else (%)"
+      ],
+      [
+        "Someone else in my household does it (%)",
+        "Someone else outside of my household (e.g. a relative or carer) does it (%)"
+      ],
+      [
+        "Each person prepares / cooks their own food (%)"
+      ],
+      [
+        "Don't know (%)"
+      ]
+    ]
+  },
+  {
+    "id": "fsa-chopping-board",
+    "dataset": "food-and-you-2",
+    "kind": "columns",
+    "file": "w11-totals.csv",
+    "table": "T145",
+    "options": [
+      [
+        "I use a different chopping board for raw meat and other foods (%)"
+      ],
+      [
+        "I wash the chopping board between preparing raw meat and other foods (%)"
+      ],
+      [
+        "I turn the chopping board over between preparing raw meat and other foods (%)"
+      ],
+      [
+        "I use the same chopping board for preparing raw meat and other foods (without washing the board) (%)"
+      ],
+      [
+        "I don't use chopping boards (%)",
+        "I don't cook with raw meat (%)"
+      ]
+    ]
   }
 ]

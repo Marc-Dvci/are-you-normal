@@ -183,6 +183,31 @@
     }
   },
   {
+    "id": "fsa-wash-chicken",
+    "text": "Do you wash raw chicken before you cook it?",
+    "options": [
+      "Never",
+      "Yes, at least sometimes",
+      "Not sure"
+    ],
+    "pcts": [
+      56.8,
+      40.3,
+      2.9
+    ],
+    "category": "food",
+    "crowd": "home cooks",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T147",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "5,500 adults in England, Wales and Northern Ireland who cook",
+      "year": 2025
+    }
+  },
+  {
     "id": "eu-books",
     "text": "How many books did you read in the last 12 months?",
     "options": [
@@ -312,6 +337,29 @@
     }
   },
   {
+    "id": "fsa-egg-float",
+    "text": "Do you check an egg by seeing if it floats in water?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      32.6,
+      67.4
+    ],
+    "category": "food",
+    "crowd": "people",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T177",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "5,898 adults in England, Wales and Northern Ireland",
+      "year": 2025
+    }
+  },
+  {
     "id": "oxford-comma",
     "text": "Which looks right to you?",
     "options": [
@@ -428,6 +476,35 @@
       "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/steak-survey/steak-risk-survey.csv",
       "sample": "538 people surveyed online in the US",
       "year": null
+    }
+  },
+  {
+    "id": "fsa-defrost",
+    "text": "How do you usually defrost frozen meat or fish?",
+    "options": [
+      "In the fridge",
+      "On the worktop",
+      "In the microwave",
+      "In water",
+      "Another way, or never"
+    ],
+    "pcts": [
+      40.1,
+      36.7,
+      6.0,
+      5.8,
+      11.4
+    ],
+    "category": "food",
+    "crowd": "home cooks",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T139",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "3,599 adults in England, Wales and Northern Ireland who cook, answering online",
+      "year": 2025
     }
   },
   {
@@ -553,6 +630,35 @@
       "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/region-survey/SOUTH.csv",
       "sample": "2,528 people surveyed online in the US",
       "year": null
+    }
+  },
+  {
+    "id": "fsa-cheese-use-by",
+    "text": "How long after the use-by date would you still eat cheese?",
+    "options": [
+      "Never after it",
+      "1 to 2 days after",
+      "3 to 6 days after",
+      "A week or more after",
+      "I don't check the date"
+    ],
+    "pcts": [
+      23.4,
+      25.1,
+      27.2,
+      17.8,
+      6.5
+    ],
+    "category": "food",
+    "crowd": "cheese eaters",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T167",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "5,595 adults in England, Wales and Northern Ireland who eat cheese",
+      "year": 2025
     }
   },
   {
@@ -687,6 +793,35 @@
     }
   },
   {
+    "id": "fsa-leftovers",
+    "text": "What do you usually do with leftovers after a meal?",
+    "options": [
+      "Fridge",
+      "Freezer",
+      "Bin",
+      "Leave them out, eat later",
+      "There are never leftovers"
+    ],
+    "pcts": [
+      68.7,
+      8.3,
+      11.6,
+      4.4,
+      7.0
+    ],
+    "category": "food",
+    "crowd": "people",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T141",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "3,841 adults in England, Wales and Northern Ireland, answering online",
+      "year": 2025
+    }
+  },
+  {
     "id": "fly-recline-rude",
     "text": "Is it rude to recline your seat on a plane?",
     "options": [
@@ -810,6 +945,31 @@
     }
   },
   {
+    "id": "fsa-pink-chicken",
+    "text": "Do you ever eat chicken or turkey when it is still pink?",
+    "options": [
+      "Never",
+      "Yes, at least sometimes",
+      "Not sure, or not that meat"
+    ],
+    "pcts": [
+      90.9,
+      6.8,
+      2.3
+    ],
+    "category": "food",
+    "crowd": "meat eaters",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T127",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "3,523 adults in England, Wales and Northern Ireland who eat meat, answering online",
+      "year": 2025
+    }
+  },
+  {
     "id": "yps-funniest",
     "text": "Do you always try to be the funniest one in the room?",
     "options": [
@@ -926,6 +1086,35 @@
       "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
       "sample": "856 people surveyed online in the US",
       "year": null
+    }
+  },
+  {
+    "id": "fsa-who-cooks",
+    "text": "Who does most of the cooking in your home?",
+    "options": [
+      "Me",
+      "I share it",
+      "Someone else",
+      "We each cook our own",
+      "Not sure"
+    ],
+    "pcts": [
+      42.1,
+      34.4,
+      19.4,
+      3.7,
+      0.4
+    ],
+    "category": "home",
+    "crowd": "people",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T120",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "5,898 adults in England, Wales and Northern Ireland",
+      "year": 2025
     }
   },
   {
@@ -1054,6 +1243,29 @@
     }
   },
   {
+    "id": "fsa-taste-meat",
+    "text": "Do you taste raw meat to tell if it is still safe?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      17.0,
+      83.0
+    ],
+    "category": "food",
+    "crowd": "people",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T171",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "5,898 adults in England, Wales and Northern Ireland",
+      "year": 2025
+    }
+  },
+  {
     "id": "ew-commute",
     "text": "How do you usually get to work?",
     "options": [
@@ -1179,6 +1391,33 @@
     }
   },
   {
+    "id": "fsa-meat-use-by",
+    "text": "How long after the use-by date would you still eat raw meat?",
+    "options": [
+      "Never after it",
+      "1 to 2 days after",
+      "3 days or more after",
+      "I don't check the date"
+    ],
+    "pcts": [
+      50.7,
+      37.8,
+      8.0,
+      3.5
+    ],
+    "category": "food",
+    "crowd": "meat eaters",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T161",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "5,244 adults in England, Wales and Northern Ireland who eat raw meat or poultry",
+      "year": 2025
+    }
+  },
+  {
     "id": "yps-lists",
     "text": "Do you always make a list so you don't forget anything?",
     "options": [
@@ -1300,6 +1539,35 @@
     }
   },
   {
+    "id": "fsa-chopping-board",
+    "text": "Raw meat and vegetables: same chopping board?",
+    "options": [
+      "A separate board",
+      "Same board, washed between",
+      "Same board, flipped over",
+      "Same board, not washed",
+      "No board, or no raw meat"
+    ],
+    "pcts": [
+      49.4,
+      35.0,
+      2.9,
+      1.4,
+      11.3
+    ],
+    "category": "food",
+    "crowd": "home cooks",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T145",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "5,500 adults in England, Wales and Northern Ireland who cook",
+      "year": 2025
+    }
+  },
+  {
     "id": "sw-seen",
     "text": "Have you seen any Star Wars film?",
     "options": [
@@ -1416,6 +1684,33 @@
       "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
       "sample": "1,009 people aged 15 to 30 in Slovakia",
       "year": 2013
+    }
+  },
+  {
+    "id": "fsa-reheat",
+    "text": "How many times would you reheat the same food?",
+    "options": [
+      "Once",
+      "Twice",
+      "More than twice",
+      "Never, or not sure"
+    ],
+    "pcts": [
+      82.0,
+      9.7,
+      3.5,
+      4.8
+    ],
+    "category": "food",
+    "crowd": "people who reheat food",
+    "source": {
+      "name": "Food Standards Agency, Food and You 2, wave 11, table T125",
+      "url": "https://www.gov.uk/government/statistics/food-and-you-2-wave-11--2",
+      "licence": "Open Government Licence v3.0",
+      "licenceUrl": "https://www.gov.uk/government/collections/food-and-you-2",
+      "dataUrl": "https://fsaopendata.blob.core.windows.net/opendatacatalog/W11_allCountry_pub_postPubAmended_290926.xlsx",
+      "sample": "3,470 adults in England, Wales and Northern Ireland who reheat food, answering online",
+      "year": 2025
     }
   },
   {

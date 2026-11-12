@@ -53,7 +53,18 @@ describe('question bank', () => {
 
 type Dataset = 'fivethirtyeight' | 'young-people-survey';
 
+type ColumnsCheck = {
+  id: string;
+  dataset: 'food-and-you-2';
+  kind: 'columns';
+  file: string;
+  table: string;
+  /** Columns summed for each option; an empty list is the complement. */
+  options: string[][];
+};
+
 type Check =
+  | ColumnsCheck
   | {
       id: string;
       dataset: Dataset;
@@ -103,7 +114,52 @@ const load = (dataset: Dataset, file: string) => {
 const sampleSize = (sample: string): number =>
   Number((/^([\d,]+)/.exec(sample)?.[1] ?? '').replace(/,/g, ''));
 
-const FROM_RAW_FILES = ['FiveThirtyEight', 'Young People Survey'];
+const FROM_RAW_FILES = [
+  'FiveThirtyEight',
+  'Young People Survey',
+  'Food Standards Agency',
+];
+
+const tableTotals = (file: string): Map<string, number> => {
+  const rows = parseCsv(
+    readFileSync(
+      new URL(`../../content/data/food-and-you-2/${file}`, import.meta.url),
+      'utf8'
+    )
+  );
+  return new Map(
+    rows
+      .slice(1)
+      .filter((r) => r.length === 3)
+      .map((r) => [`${r[0]}|${r[1]}`, Number(r[2])])
+  );
+};
+
+/** Published shares are the weighted Total row of each table, summed per option. */
+const checkColumns = (check: ColumnsCheck) => {
+  const q = BANK.find((b) => b.id === check.id);
+  if (!q) throw new Error(`${check.id} is not in the bank`);
+  const totals = tableTotals(check.file);
+  const cell = (column: string): number => {
+    const value = totals.get(`${check.table}|${column}`);
+    if (value === undefined)
+      throw new Error(`${check.id}: no ${column} in ${check.table}`);
+    return value;
+  };
+  expect(cell('Sample Size')).toBe(sampleSize(q.source.sample));
+  expect(check.options).toHaveLength(q.options.length);
+  const sums = check.options.map((cols) =>
+    cols.reduce((sum, c) => sum + cell(c), 0)
+  );
+  const shares = check.options.map((cols, i) =>
+    cols.length > 0
+      ? (sums[i] ?? 0)
+      : 100 - sums.reduce((a, b, j) => (j === i ? a : a + b), 0)
+  );
+  q.pcts.forEach((published, i) => {
+    expect(Math.abs(published - (shares[i] ?? 0))).toBeLessThan(0.1);
+  });
+};
 
 describe('survey figures, recomputed from the raw response files', () => {
   it('covers every question that comes from a raw response file', () => {
@@ -116,6 +172,10 @@ describe('survey figures, recomputed from the raw response files', () => {
   it.each(checks.map((c) => [c.id, c] as const))(
     '%s matches its raw file',
     (id, check) => {
+      if (check.kind === 'columns') {
+        checkColumns(check);
+        return;
+      }
       const q = BANK.find((b) => b.id === id);
       if (!q) throw new Error(`${id} is not in the bank`);
       const { header, body } = load(check.dataset, check.file);
