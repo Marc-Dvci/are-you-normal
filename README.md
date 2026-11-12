@@ -6,6 +6,12 @@
 [![Licence](https://img.shields.io/badge/licence-BSD--3--Clause-555)](LICENSE)
 [![Play on Reddit](https://img.shields.io/badge/play-r%2FAreYouNormalDaily-ff4500)](https://www.reddit.com/r/AreYouNormalDaily/)
 
+<p align="center">
+  <img src="docs/feed-card.png" width="250" alt="The feed card on Reddit: edition No. 1 asks 'Do you recline your seat when you fly?' with five answer boxes and a row of figures">
+  <img src="docs/reveal.png" width="250" alt="A reveal on Reddit: 30 in 100 flyers said 'Once in a while', an ODD stamp on the crowd, the guess 8 off for 84 points, and the survey and subreddit rows">
+  <img src="docs/day-card.png" width="250" alt="The day card on Reddit: an ODD stamp, 244 of 300 points, rank 1st, a 1-day streak and the line 'You know exactly how normal you are. Unsettling.'">
+</p>
+
 **A daily Reddit game that puts you, your subreddit and a real published survey on the same chart.**
 
 Every day a new post asks three everyday questions. You answer for yourself, guess how many people in 100 answered the same way, and then see the real share from a cited survey next to the live share of players in the subreddit. A rubber stamp gives the verdict: under 5% is a weirdo, over 70% is boring.
@@ -29,6 +35,8 @@ Every day a new post asks three everyday questions. You answer for yourself, gue
 5. **Your day.** After three questions you get a stamp for the day, your score out of 300, your rank, your streak and, after a few days, how far you over- or under-estimate how common you are.
 
 Then you can post your verdict as a reply in the day's results thread, wear your stamp as flair, join the subreddit, or propose tomorrow's question.
+
+<p align="center"><img src="docs/guess-and-reveal.gif" width="300" alt="Recorded on Reddit: the player fills the crowd to guess 22 in 100, locks the guess, and the survey's 30 in 100 fills in with an ODD stamp"></p>
 
 ## For judges
 
