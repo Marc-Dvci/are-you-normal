@@ -65,15 +65,16 @@ export const recordComments = () => {
     [];
   vi.spyOn(reddit, 'submitComment').mockImplementation(async (opts) => {
     const id = `t1_c${posted.length + 1}`;
+    const text = 'text' in opts ? opts.text : '';
     posted.push({
       id,
       parent: opts.id,
-      text: opts.text ?? '',
+      text,
       runAs: opts.runAs ?? 'APP',
     });
     const comment = {
       id,
-      body: opts.text ?? '',
+      body: text,
       permalink: `/r/areyounormal/comments/x/_/${id}`,
       distinguish: async () => undefined,
     };
