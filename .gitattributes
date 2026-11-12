@@ -2,5 +2,5 @@
 *.png binary
 *.gif binary
 *.woff2 binary
-content/fivethirtyeight/** linguist-vendored
+content/data/** linguist-vendored
 content/**/*.csv linguist-vendored

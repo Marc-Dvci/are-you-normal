@@ -1,6 +1,7 @@
 [
   {
     "id": "fly-recline",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 2,
@@ -15,6 +16,7 @@
   },
   {
     "id": "fly-recline-rude",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 12,
@@ -27,6 +29,7 @@
   },
   {
     "id": "fly-armrests-three",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 5,
@@ -41,6 +44,7 @@
   },
   {
     "id": "fly-armrest-two",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 6,
@@ -55,6 +59,7 @@
   },
   {
     "id": "fly-shade",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 7,
@@ -66,6 +71,7 @@
   },
   {
     "id": "fly-empty-seat",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 8,
@@ -78,6 +84,7 @@
   },
   {
     "id": "fly-chat",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 9,
@@ -90,6 +97,7 @@
   },
   {
     "id": "fly-owe",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 11,
@@ -101,6 +109,7 @@
   },
   {
     "id": "fly-ban",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 13,
@@ -112,6 +121,7 @@
   },
   {
     "id": "fly-swap-friends",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 14,
@@ -124,6 +134,7 @@
   },
   {
     "id": "fly-wake-bathroom",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 16,
@@ -136,6 +147,7 @@
   },
   {
     "id": "fly-wake-walk",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 17,
@@ -148,6 +160,7 @@
   },
   {
     "id": "fly-phone-takeoff",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "flying-etiquette-survey/flying-etiquette.csv",
     "columnIndex": 20,
@@ -159,6 +172,7 @@
   },
   {
     "id": "steak",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "steak-survey/steak-risk-survey.csv",
     "columnIndex": 9,
@@ -173,6 +187,7 @@
   },
   {
     "id": "skydiving",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "steak-survey/steak-risk-survey.csv",
     "columnIndex": 5,
@@ -184,6 +199,7 @@
   },
   {
     "id": "tg-celebrate",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
     "columnIndex": 1,
@@ -195,6 +211,7 @@
   },
   {
     "id": "tg-main-dish",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
     "columnIndex": 2,
@@ -212,6 +229,7 @@
   },
   {
     "id": "tg-cranberry",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
     "columnIndex": 8,
@@ -225,6 +243,7 @@
   },
   {
     "id": "tg-stuffing",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
     "columnIndex": 6,
@@ -238,6 +257,7 @@
   },
   {
     "id": "tg-friendsgiving",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
     "columnIndex": 56,
@@ -249,6 +269,7 @@
   },
   {
     "id": "tg-travel",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
     "columnIndex": 52,
@@ -262,6 +283,7 @@
   },
   {
     "id": "tg-black-friday",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "thanksgiving-2015/thanksgiving-2015-poll-data.csv",
     "columnIndex": 57,
@@ -273,6 +295,7 @@
   },
   {
     "id": "oxford-comma",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "comma-survey/comma-survey.csv",
     "columnIndex": 1,
@@ -284,6 +307,7 @@
   },
   {
     "id": "data-is",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "comma-survey/comma-survey.csv",
     "columnIndex": 4,
@@ -295,6 +319,7 @@
   },
   {
     "id": "data-wondered",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "comma-survey/comma-survey.csv",
     "columnIndex": 5,
@@ -306,6 +331,7 @@
   },
   {
     "id": "oxford-heard",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "comma-survey/comma-survey.csv",
     "columnIndex": 2,
@@ -317,6 +343,7 @@
   },
   {
     "id": "oxford-care",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "comma-survey/comma-survey.csv",
     "columnIndex": 3,
@@ -330,6 +357,7 @@
   },
   {
     "id": "sw-seen",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "star-wars-survey/StarWars.csv",
     "columnIndex": 1,
@@ -341,6 +369,7 @@
   },
   {
     "id": "sw-shot-first",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "star-wars-survey/StarWars.csv",
     "columnIndex": 29,
@@ -353,6 +382,7 @@
   },
   {
     "id": "sw-jar-jar",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "star-wars-survey/StarWars.csv",
     "columnIndex": 26,
@@ -368,6 +398,7 @@
   },
   {
     "id": "trek-fan",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "star-wars-survey/StarWars.csv",
     "columnIndex": 32,
@@ -379,6 +410,7 @@
   },
   {
     "id": "weather-daily",
+    "dataset": "fivethirtyeight",
     "kind": "single",
     "file": "weather-check/weather-check.csv",
     "columnIndex": 1,
@@ -390,6 +422,7 @@
   },
   {
     "id": "south-texas",
+    "dataset": "fivethirtyeight",
     "kind": "checkbox",
     "file": "region-survey/SOUTH.csv",
     "columnIndex": 9,
@@ -397,6 +430,7 @@
   },
   {
     "id": "south-maryland",
+    "dataset": "fivethirtyeight",
     "kind": "checkbox",
     "file": "region-survey/SOUTH.csv",
     "columnIndex": 16,
@@ -404,9 +438,304 @@
   },
   {
     "id": "midwest-pennsylvania",
+    "dataset": "fivethirtyeight",
     "kind": "checkbox",
     "file": "region-survey/MIDWEST.csv",
     "columnIndex": 22,
     "column": ""
+  },
+  {
+    "id": "yps-spiders",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 67,
+    "column": "Spiders",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-flying",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 63,
+    "column": "Flying",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-dark",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 65,
+    "column": "Darkness",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-snakes",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 68,
+    "column": "Snakes",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-heights",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 66,
+    "column": "Heights",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-public-speaking",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 72,
+    "column": "Fear of public speaking",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-thunder",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 64,
+    "column": "Storm",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-getting-up",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 128,
+    "column": "Getting up",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-tasks",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 77,
+    "column": "Prioritising workload",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-funniest",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 86,
+    "column": "Funniness",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-lost-item",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 127,
+    "column": "Finding lost valuables",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-lists",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 78,
+    "column": "Writing notes",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-branded",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 135,
+    "column": "Branded clothing",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-shopping-centres",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 134,
+    "column": "Shopping centres",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-horror",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 20,
+    "column": "Horror",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-opera",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 18,
+    "column": "Opera",
+    "map": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    }
+  },
+  {
+    "id": "yps-friends-money",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 85,
+    "column": "Friends versus money",
+    "map": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 0,
+      "5": 0
+    }
+  },
+  {
+    "id": "yps-punctuality",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 107,
+    "column": "Punctuality",
+    "map": {
+      "i am often early": 0,
+      "i am always on time": 1,
+      "i am often running late": 2
+    }
+  },
+  {
+    "id": "yps-lying",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 108,
+    "column": "Lying",
+    "map": {
+      "never": 0,
+      "only to avoid hurting someone": 1,
+      "sometimes": 2,
+      "everytime it suits me": 3
+    }
+  },
+  {
+    "id": "yps-handed",
+    "dataset": "young-people-survey",
+    "kind": "single",
+    "file": "responses.csv",
+    "columnIndex": 145,
+    "column": "Left - right handed",
+    "map": {
+      "left handed": 0,
+      "right handed": 1
+    }
   }
 ]

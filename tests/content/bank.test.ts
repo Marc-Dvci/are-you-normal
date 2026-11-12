@@ -11,6 +11,7 @@ import { parseCsv } from './csv';
 
 const LICENCES = [
   'CC BY 4.0',
+  'CC0 1.0',
   'Public domain',
   'Open Government Licence v3.0',
   'Quoted with attribution, Pew Research Center use policy',
@@ -50,9 +51,12 @@ describe('question bank', () => {
   );
 });
 
+type Dataset = 'fivethirtyeight' | 'young-people-survey';
+
 type Check =
   | {
       id: string;
+      dataset: Dataset;
       kind: 'single';
       file: string;
       columnIndex: number;
@@ -61,6 +65,7 @@ type Check =
     }
   | {
       id: string;
+      dataset: Dataset;
       kind: 'checkbox';
       file: string;
       columnIndex: number;
@@ -68,51 +73,52 @@ type Check =
     };
 
 const checks: Check[] = JSON.parse(
-  readFileSync(
-    new URL('../../content/fivethirtyeight-checks.json', import.meta.url),
-    'utf8'
-  )
+  readFileSync(new URL('../../content/checks.json', import.meta.url), 'utf8')
 );
 
 const MISSING = new Set(['', '-']);
 const cache = new Map<string, { header: string[]; body: string[][] }>();
 
-/** FiveThirtyEight CSVs carry a second label row whose first cell is empty. */
-const load = (file: string) => {
-  const hit = cache.get(file);
+/**
+ * Loads a raw survey file. FiveThirtyEight files carry a second label row
+ * whose first cell is empty; the Young People Survey has one header row.
+ */
+const load = (dataset: Dataset, file: string) => {
+  const key = `${dataset}/${file}`;
+  const hit = cache.get(key);
   if (hit) return hit;
   const rows = parseCsv(
-    readFileSync(
-      new URL(`../../content/fivethirtyeight/${file}`, import.meta.url),
-      'utf8'
-    )
+    readFileSync(new URL(`../../content/data/${key}`, import.meta.url), 'utf8')
   );
   const header = rows[0] ?? [];
   const body = rows
     .slice(1)
-    .filter((r) => r.length > 1 && (r[0] ?? '').trim() !== '');
+    .filter((r) => r.length > 1)
+    .filter((r) => dataset !== 'fivethirtyeight' || (r[0] ?? '').trim() !== '');
   const loaded = { header, body };
-  cache.set(file, loaded);
+  cache.set(key, loaded);
   return loaded;
 };
 
 const sampleSize = (sample: string): number =>
   Number((/^([\d,]+)/.exec(sample)?.[1] ?? '').replace(/,/g, ''));
 
-describe('FiveThirtyEight figures, recomputed from the raw survey files', () => {
-  it('covers every FiveThirtyEight question in the bank', () => {
-    const fte = BANK.filter((q) =>
-      q.source.name.startsWith('FiveThirtyEight')
+const FROM_RAW_FILES = ['FiveThirtyEight', 'Young People Survey'];
+
+describe('survey figures, recomputed from the raw response files', () => {
+  it('covers every question that comes from a raw response file', () => {
+    const fromFiles = BANK.filter((q) =>
+      FROM_RAW_FILES.some((name) => q.source.name.startsWith(name))
     ).map((q) => q.id);
-    expect(checks.map((c) => c.id).sort()).toEqual([...fte].sort());
+    expect(checks.map((c) => c.id).sort()).toEqual([...fromFiles].sort());
   });
 
   it.each(checks.map((c) => [c.id, c] as const))(
-    '%s matches its CSV',
+    '%s matches its raw file',
     (id, check) => {
       const q = BANK.find((b) => b.id === id);
       if (!q) throw new Error(`${id} is not in the bank`);
-      const { header, body } = load(check.file);
+      const { header, body } = load(check.dataset, check.file);
       const counts = q.options.map(() => 0);
       let n = 0;
       if (check.kind === 'single') {

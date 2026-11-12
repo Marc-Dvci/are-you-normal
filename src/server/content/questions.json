@@ -52,26 +52,28 @@
     }
   },
   {
-    "id": "skydiving",
-    "text": "Have you ever been skydiving?",
+    "id": "yps-spiders",
+    "text": "Are you afraid of spiders?",
     "options": [
-      "Yes",
-      "No"
+      "Not afraid",
+      "A bit afraid",
+      "Very afraid"
     ],
     "pcts": [
-      6.7,
-      93.3
+      48.6,
+      15.6,
+      35.8
     ],
-    "category": "leisure",
-    "crowd": "people",
+    "category": "home",
+    "crowd": "young Slovaks",
     "source": {
-      "name": "FiveThirtyEight, steak survey",
-      "url": "https://github.com/fivethirtyeight/data/tree/master/steak-survey",
-      "licence": "CC BY 4.0",
-      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
-      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/steak-survey/steak-risk-survey.csv",
-      "sample": "538 people surveyed online in the US",
-      "year": null
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,005 people aged 15 to 30 in Slovakia",
+      "year": 2013
     }
   },
   {
@@ -131,6 +133,31 @@
     }
   },
   {
+    "id": "yps-punctuality",
+    "text": "Are you usually early, on time or late?",
+    "options": [
+      "Often early",
+      "Always on time",
+      "Often running late"
+    ],
+    "pcts": [
+      32.4,
+      39.6,
+      28.0
+    ],
+    "category": "manners",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,008 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "sw-shot-first",
     "text": "Han or Greedo: who shot first?",
     "options": [
@@ -180,6 +207,29 @@
       "dataUrl": null,
       "sample": "People aged 16 and over in the EU",
       "year": 2022
+    }
+  },
+  {
+    "id": "yps-handed",
+    "text": "Are you left-handed or right-handed?",
+    "options": [
+      "Left-handed",
+      "Right-handed"
+    ],
+    "pcts": [
+      10.0,
+      90.0
+    ],
+    "category": "social",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,007 people aged 15 to 30 in Slovakia",
+      "year": 2013
     }
   },
   {
@@ -235,6 +285,33 @@
     }
   },
   {
+    "id": "yps-lying",
+    "text": "How often do you lie to other people?",
+    "options": [
+      "Never",
+      "Only to spare feelings",
+      "Sometimes",
+      "Whenever it suits me"
+    ],
+    "pcts": [
+      5.0,
+      26.8,
+      54.5,
+      13.7
+    ],
+    "category": "social",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,008 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "oxford-comma",
     "text": "Which looks right to you?",
     "options": [
@@ -281,6 +358,31 @@
     }
   },
   {
+    "id": "yps-friends-money",
+    "text": "Lots of friends or lots of money?",
+    "options": [
+      "Friends",
+      "Can't choose",
+      "Money"
+    ],
+    "pcts": [
+      60.4,
+      27.4,
+      12.2
+    ],
+    "category": "social",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,004 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "pew-tipping",
     "text": "Is tipping more of a choice or more of an obligation?",
     "options": [
@@ -303,6 +405,54 @@
       "dataUrl": null,
       "sample": "11,945 US adults",
       "year": 2023
+    }
+  },
+  {
+    "id": "skydiving",
+    "text": "Have you ever been skydiving?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "pcts": [
+      6.7,
+      93.3
+    ],
+    "category": "leisure",
+    "crowd": "people",
+    "source": {
+      "name": "FiveThirtyEight, steak survey",
+      "url": "https://github.com/fivethirtyeight/data/tree/master/steak-survey",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://github.com/fivethirtyeight/data/blob/master/README.md",
+      "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/steak-survey/steak-risk-survey.csv",
+      "sample": "538 people surveyed online in the US",
+      "year": null
+    }
+  },
+  {
+    "id": "yps-dark",
+    "text": "Are you afraid of the dark?",
+    "options": [
+      "Not afraid",
+      "A bit afraid",
+      "Very afraid"
+    ],
+    "pcts": [
+      65.4,
+      16.4,
+      18.2
+    ],
+    "category": "sleep",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,008 people aged 15 to 30 in Slovakia",
+      "year": 2013
     }
   },
   {
@@ -358,6 +508,31 @@
     }
   },
   {
+    "id": "yps-getting-up",
+    "text": "Do you find it very hard to get up in the morning?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      22.9,
+      20.7,
+      56.4
+    ],
+    "category": "sleep",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,005 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "south-texas",
     "text": "Is Texas part of the South?",
     "options": [
@@ -405,6 +580,31 @@
       "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv",
       "sample": "951 people surveyed online in the US",
       "year": 2015
+    }
+  },
+  {
+    "id": "yps-horror",
+    "text": "Do you enjoy horror films?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      45.1,
+      21.2,
+      33.7
+    ],
+    "category": "culture",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,008 people aged 15 to 30 in Slovakia",
+      "year": 2013
     }
   },
   {
@@ -462,6 +662,31 @@
     }
   },
   {
+    "id": "yps-lost-item",
+    "text": "If you find something that isn't yours, do you hand it in?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      35.9,
+      34.8,
+      29.3
+    ],
+    "category": "manners",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,006 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "fly-recline-rude",
     "text": "Is it rude to recline your seat on a plane?",
     "options": [
@@ -507,6 +732,31 @@
       "dataUrl": null,
       "sample": "26,523 people aged 15 and over in the EU",
       "year": 2023
+    }
+  },
+  {
+    "id": "yps-public-speaking",
+    "text": "Are you afraid of public speaking?",
+    "options": [
+      "Not afraid",
+      "A bit afraid",
+      "Very afraid"
+    ],
+    "pcts": [
+      40.6,
+      30.5,
+      28.9
+    ],
+    "category": "work",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,009 people aged 15 to 30 in Slovakia",
+      "year": 2013
     }
   },
   {
@@ -560,6 +810,31 @@
     }
   },
   {
+    "id": "yps-funniest",
+    "text": "Do you always try to be the funniest one in the room?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      22.5,
+      35.4,
+      42.1
+    ],
+    "category": "social",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,006 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "data-wondered",
     "text": "Have you ever stopped to wonder if “data” is singular or plural?",
     "options": [
@@ -606,6 +881,31 @@
     }
   },
   {
+    "id": "yps-flying",
+    "text": "Are you afraid of flying?",
+    "options": [
+      "Not afraid",
+      "A bit afraid",
+      "Very afraid"
+    ],
+    "pcts": [
+      66.5,
+      20.6,
+      12.9
+    ],
+    "category": "travel",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,007 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "fly-shade",
     "text": "Who controls the window shade in your row?",
     "options": [
@@ -649,6 +949,31 @@
       "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/star-wars-survey/StarWars.csv",
       "sample": "1,068 people surveyed online in the US",
       "year": null
+    }
+  },
+  {
+    "id": "yps-tasks",
+    "text": "Do you do tasks straight away, never at the last minute?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      45.8,
+      30.5,
+      23.7
+    ],
+    "category": "work",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,005 people aged 15 to 30 in Slovakia",
+      "year": 2013
     }
   },
   {
@@ -704,6 +1029,31 @@
     }
   },
   {
+    "id": "yps-heights",
+    "text": "Are you afraid of heights?",
+    "options": [
+      "Not afraid",
+      "A bit afraid",
+      "Very afraid"
+    ],
+    "pcts": [
+      50.4,
+      23.0,
+      26.6
+    ],
+    "category": "travel",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,007 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "ew-commute",
     "text": "How do you usually get to work?",
     "options": [
@@ -756,6 +1106,31 @@
     }
   },
   {
+    "id": "yps-opera",
+    "text": "Do you enjoy opera?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      67.7,
+      17.3,
+      15.0
+    ],
+    "category": "culture",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,009 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "fly-empty-seat",
     "text": "Is it rude to move to an empty seat you did not pay for?",
     "options": [
@@ -804,6 +1179,31 @@
     }
   },
   {
+    "id": "yps-lists",
+    "text": "Do you always make a list so you don't forget anything?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      36.7,
+      22.2,
+      41.1
+    ],
+    "category": "home",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,007 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "south-maryland",
     "text": "Is Maryland part of the South?",
     "options": [
@@ -847,6 +1247,31 @@
       "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv",
       "sample": "951 people surveyed online in the US",
       "year": 2015
+    }
+  },
+  {
+    "id": "yps-snakes",
+    "text": "Are you afraid of snakes?",
+    "options": [
+      "Not afraid",
+      "A bit afraid",
+      "Very afraid"
+    ],
+    "pcts": [
+      39.5,
+      18.9,
+      41.6
+    ],
+    "category": "leisure",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,010 people aged 15 to 30 in Slovakia",
+      "year": 2013
     }
   },
   {
@@ -898,6 +1323,31 @@
     }
   },
   {
+    "id": "yps-branded",
+    "text": "Do you prefer branded clothes to unbranded ones?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      32.5,
+      28.1,
+      39.4
+    ],
+    "category": "money",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,008 people aged 15 to 30 in Slovakia",
+      "year": 2013
+    }
+  },
+  {
     "id": "fly-owe",
     "text": "If you recline, do you owe anything to the person behind you?",
     "options": [
@@ -941,6 +1391,31 @@
       "dataUrl": null,
       "sample": "People aged 15 and over in the US, share active on an average day",
       "year": 2025
+    }
+  },
+  {
+    "id": "yps-thunder",
+    "text": "Are you afraid of thunder and lightning?",
+    "options": [
+      "Not afraid",
+      "A bit afraid",
+      "Very afraid"
+    ],
+    "pcts": [
+      72.8,
+      15.0,
+      12.2
+    ],
+    "category": "home",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,009 people aged 15 to 30 in Slovakia",
+      "year": 2013
     }
   },
   {
@@ -993,6 +1468,31 @@
       "dataUrl": "https://raw.githubusercontent.com/fivethirtyeight/data/master/flying-etiquette-survey/flying-etiquette.csv",
       "sample": "855 people surveyed online in the US",
       "year": null
+    }
+  },
+  {
+    "id": "yps-shopping-centres",
+    "text": "Do you enjoy going to big shopping centres?",
+    "options": [
+      "No",
+      "Sort of",
+      "Yes"
+    ],
+    "pcts": [
+      30.6,
+      24.1,
+      45.3
+    ],
+    "category": "money",
+    "crowd": "young Slovaks",
+    "source": {
+      "name": "Young People Survey (Miroslav Sabo)",
+      "url": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "licence": "CC0 1.0",
+      "licenceUrl": "https://www.kaggle.com/datasets/miroslavsabo/young-people-survey",
+      "dataUrl": "https://github.com/FHU/young-people-survey/blob/master/responses.csv",
+      "sample": "1,008 people aged 15 to 30 in Slovakia",
+      "year": 2013
     }
   },
   {

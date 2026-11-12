@@ -9,8 +9,8 @@ Every day a new post asks three everyday questions. You answer for yourself, gue
 | Platform | Reddit Developer Platform (Devvit Web), interactive posts |
 | Event | Reddit's Game of the Day Hackathon, 2026 |
 | Built with | TypeScript, React 19, Hono, Devvit Redis, realtime, scheduler and Journeys |
-| Question bank | 49 questions from FiveThirtyEight, Eurostat, the US Bureau of Labor Statistics, the UK Office for National Statistics and Pew Research Center |
-| Tests | 171 passing, 95% of server and shared lines covered |
+| Question bank | 69 cited questions from FiveThirtyEight, the Young People Survey, Eurostat, the US Bureau of Labor Statistics, the UK Office for National Statistics and Pew Research Center |
+| Tests | 211 passing, 95% of server and shared lines covered |
 
 ## How to play
 
@@ -39,7 +39,8 @@ Each question cites its source, its sample and its licence on the reveal screen.
 
 | Source | Licence | Questions | How the figures are checked |
 |---|---|---:|---|
-| FiveThirtyEight survey data | CC BY 4.0 | 35 | Recomputed from the raw survey files in `content/fivethirtyeight/` on every test run |
+| FiveThirtyEight survey data | CC BY 4.0 | 35 | Recomputed from the raw survey files in `content/data/` on every test run |
+| Young People Survey, 1,010 people aged 15 to 30 in Slovakia, 2013 | CC0 1.0 | 20 | Recomputed from the raw response file in `content/data/` on every test run |
 | US Bureau of Labor Statistics, American Time Use Survey 2025 | Public domain | 7 | Read from Table 1 |
 | Eurostat and the European Commission | CC BY 4.0 | 4 | Read from the named Eurostat tables and the Eurobarometer release |
 | UK Office for National Statistics, Census 2021 | Open Government Licence v3.0 | 1 | Summed from table TS061 |
@@ -73,7 +74,7 @@ Requires Node 24.
 
 ```bash
 npm install
-npm test                 # 171 tests, no network, no Reddit account
+npm test                 # 211 tests, no network, no Reddit account
 npm run dev:api          # local API on :8787, using Reddit's own test mocks
 npm run dev:web          # local client on :5173, open /splash.html or /game.html
 ```
@@ -85,9 +86,9 @@ To run it on Reddit: `npm run login`, then `npm run dev` to playtest in a test s
 ## Tests
 
 - `tests/shared`: scoring boundaries and properties, tiers, verdict lines, edition dates, the comparison line, proposal checks, summaries.
-- `tests/content`: every bank question is checked for wording length, answers, shares, licence and source; every FiveThirtyEight share is recomputed from its raw file.
+- `tests/content`: every bank question is checked for wording length, answers, shares, licence and source; every FiveThirtyEight and Young People Survey share is recomputed from its raw file.
 - `tests/server`: the real Hono routes under Reddit's `@devvit/test` harness: editions, one vote per player, logged-out play, scoring, ranks, streaks, the daily job, proposals, verdicts and telemetry routes.
 
 ## Licence
 
-Code: BSD 3-Clause, including parts of Reddit's Devvit React template. Survey data in `content/fivethirtyeight/`: FiveThirtyEight, CC BY 4.0. Font: Jost, SIL Open Font License.
+Code: BSD 3-Clause, including parts of Reddit's Devvit React template. Survey data in `content/data/fivethirtyeight/`: FiveThirtyEight, CC BY 4.0. Survey data in `content/data/young-people-survey/`: Miroslav Sabo, CC0 1.0. Font: Jost, SIL Open Font License.
