@@ -90,6 +90,8 @@ export const Game = () => {
   const [step, setStep] = useState<Step>({ kind: 'loading' });
   const [busy, setBusy] = useState(false);
   const [verdictPosted, setVerdictPosted] = useState(false);
+  const [flair, setFlair] = useState<string | null>(null);
+  const [joined, setJoined] = useState(false);
   const top = useRef<HTMLDivElement>(null);
 
   const loggedIn = state?.me.loggedIn ?? false;
@@ -227,6 +229,34 @@ export const Game = () => {
     }
   };
 
+  const onFlair = async () => {
+    setBusy(true);
+    try {
+      const res = await api.flair();
+      setFlair(res.text);
+      showToast(`Your flair now reads “${res.text}”.`);
+      journey.interaction('wear_flair');
+    } catch (error) {
+      showToast(message(error));
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const onJoin = async () => {
+    setBusy(true);
+    try {
+      await api.join();
+      setJoined(true);
+      showToast('Joined. Tomorrow’s edition will be in your feed.');
+      journey.interaction('join_subreddit');
+    } catch (error) {
+      showToast(message(error));
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const onPropose = async () => {
     const result = await showForm({
       title: 'Propose tomorrow’s question',
@@ -352,6 +382,11 @@ export const Game = () => {
           onVerdict={() => void onVerdict()}
           onPropose={() => void onPropose()}
           onLogin={() => showLoginPrompt()}
+          onFlair={() => void onFlair()}
+          onJoin={() => void onJoin()}
+          subreddit={state.edition.subreddit}
+          flair={flair}
+          joined={joined}
           verdictPosted={verdictPosted}
           busy={busy}
         />

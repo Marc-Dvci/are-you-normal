@@ -4,10 +4,13 @@ import type {
   AnswerResponse,
   CommentResponse,
   ErrorResponse,
+  FlairResponse,
   GuessResponse,
+  JoinResponse,
   ProposalResponse,
   StateResponse,
 } from '../../shared/types';
+import { joinSubreddit, wearStamp } from '../core/belonging';
 import { ProposalError, submitProposal } from '../core/community';
 import { editionForPost, ensureTodayEdition } from '../core/editions';
 import { answer, getState, guess, PlayError, type Player } from '../core/play';
@@ -159,6 +162,28 @@ api.post('/propose', async (c) => {
       options
     );
     return c.json<ProposalResponse>({ type: 'proposal', permalink });
+  } catch (error) {
+    return fail(c, error);
+  }
+});
+
+api.post('/flair', async (c) => {
+  try {
+    const player = await currentPlayer();
+    if (!player) throw new PlayError('Log in to wear your stamp.');
+    const { n } = await currentEdition();
+    const text = await wearStamp(n, player, new Date());
+    return c.json<FlairResponse>({ type: 'flair', text });
+  } catch (error) {
+    return fail(c, error);
+  }
+});
+
+api.post('/join', async (c) => {
+  try {
+    if (!(await currentPlayer())) throw new PlayError('Log in to join.');
+    await joinSubreddit();
+    return c.json<JoinResponse>({ type: 'join' });
   } catch (error) {
     return fail(c, error);
   }

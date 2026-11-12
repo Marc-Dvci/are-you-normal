@@ -1,4 +1,4 @@
-import { redis } from '@devvit/web/server';
+import { context, redis } from '@devvit/web/server';
 import { contrastLine } from '../../shared/compare';
 import { nextEditionAt } from '../../shared/edition';
 import {
@@ -243,6 +243,7 @@ export const getState = async (
       players: Number(players ?? '0'),
       nextAt: nextEditionAt(now).toISOString(),
       isToday: n === today,
+      subreddit: context.subredditName,
     },
     me: {
       loggedIn: player !== null,

@@ -85,6 +85,7 @@ export type EditionInfo = {
   /** ISO time of the next edition. */
   nextAt: string;
   isToday: boolean;
+  subreddit: string;
 };
 
 export type StateResponse = {
@@ -116,6 +117,10 @@ export type ProposalRequest = { question: string; options: string[] };
 export type ProposalResponse = { type: 'proposal'; permalink: string | null };
 
 export type CommentResponse = { type: 'comment'; permalink: string | null };
+
+export type FlairResponse = { type: 'flair'; text: string };
+
+export type JoinResponse = { type: 'join' };
 
 export type ErrorResponse = { type: 'error'; message: string };
 

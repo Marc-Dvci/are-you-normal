@@ -2,7 +2,9 @@ import type {
   AnswerResponse,
   CommentResponse,
   ErrorResponse,
+  FlairResponse,
   GuessResponse,
+  JoinResponse,
   ProposalResponse,
   StateResponse,
 } from '../../shared/types';
@@ -33,6 +35,8 @@ export const api = {
   guess: (q: number, guess: number, option: number) =>
     request<GuessResponse>('/api/guess', { q, guess, option }),
   verdict: () => request<CommentResponse>('/api/verdict', {}),
+  flair: () => request<FlairResponse>('/api/flair', {}),
+  join: () => request<JoinResponse>('/api/join', {}),
   propose: (question: string, options: string[]) =>
     request<ProposalResponse>('/api/propose', { question, options }),
 };

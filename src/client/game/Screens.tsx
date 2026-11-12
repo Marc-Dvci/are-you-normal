@@ -109,9 +109,14 @@ export const GuessScreen = ({
           label={`Your guess, out of 100 ${question.crowd}`}
         />
       </div>
+      {guess === null && (
+        <p className="hint guess-hint">
+          Each figure is one person. Tap or drag across the crowd.
+        </p>
+      )}
       <div className="readout">
         <span className="big num" aria-live="polite">
-          {guess ?? '–'}
+          {guess ?? <span className="unset">?</span>}
         </span>
         <span className="of">in 100</span>
         <span className="nudge">
@@ -204,15 +209,13 @@ export const RevealScreen = ({
         <div className="truth">
           <span className="big num">{Math.round(reveal.truth)}</span>
           <span className="of">
-            in 100 {question.crowd}
-            <br />
-            said <strong>{answer}</strong>
+            in 100 {question.crowd} said <strong>{answer}</strong>
           </span>
         </div>
-        <Stamp tier={reveal.tier} />
       </div>
       <p className="line">{reveal.line}</p>
       <div className="crowd-wrap reveal">
+        <Stamp tier={reveal.tier} />
         <CrowdGrid
           mode="reveal"
           guess={reveal.guess}
@@ -220,6 +223,10 @@ export const RevealScreen = ({
           label={`${pctText(reveal.truth)} of ${crowdName} answered ${answer}. You guessed ${reveal.guess}.`}
         />
       </div>
+      <p className="legend" aria-hidden="true">
+        <span className="key-ink" /> said {answer}
+        <span className="key-red" /> your guess
+      </p>
       <p className="score-line">
         <span className="mark" aria-hidden="true" />
         <span>
@@ -298,6 +305,11 @@ export const DayScreen = ({
   onVerdict,
   onPropose,
   onLogin,
+  onFlair,
+  onJoin,
+  subreddit,
+  flair,
+  joined,
   verdictPosted,
   busy,
 }: {
@@ -312,6 +324,11 @@ export const DayScreen = ({
   onVerdict: () => void;
   onPropose: () => void;
   onLogin: () => void;
+  onFlair: () => void;
+  onJoin: () => void;
+  subreddit: string;
+  flair: string | null;
+  joined: boolean;
   verdictPosted: boolean;
   busy: boolean;
 }) => (
@@ -394,6 +411,25 @@ export const DayScreen = ({
             </span>
           </button>
           <p className="fine">Replies to the results thread as u/{username}.</p>
+          <div className="pair">
+            <button
+              type="button"
+              className="btn ghost small"
+              disabled={flair !== null || busy}
+              onClick={onFlair}
+            >
+              <span>{flair ? 'Wearing it' : 'Wear it as flair'}</span>
+            </button>
+            <button
+              type="button"
+              className="btn ghost small"
+              disabled={joined || busy}
+              onClick={onJoin}
+              title={`r/${subreddit}`}
+            >
+              <span>{joined ? 'Joined' : 'Join this sub'}</span>
+            </button>
+          </div>
           {isToday && (
             <button
               type="button"

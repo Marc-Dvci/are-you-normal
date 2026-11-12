@@ -288,3 +288,65 @@ describe('journey telemetry routes', () => {
     expect(noId.status).toBe(400);
   });
 });
+
+describe('flair and joining', () => {
+  test('wearing the stamp needs a finished day and sets the player flair', async ({
+    headers,
+  }) => {
+    at(DAY1);
+    const postId = await install(headers);
+    const setFlair = vi
+      .spyOn(reddit, 'setUserFlair')
+      .mockResolvedValue(undefined);
+    const early = await call(headers, { ...ALICE, postId }, '/api/flair', {});
+    expect(early.status).toBe(409);
+    expect(setFlair).not.toHaveBeenCalled();
+    for (let q = 0; q < 3; q++) {
+      await call(headers, { ...ALICE, postId }, '/api/guess', {
+        q,
+        option: 0,
+        guess: 40,
+      });
+    }
+    const ok = await call(headers, { ...ALICE, postId }, '/api/flair', {});
+    expect(ok.status).toBe(200);
+    const body = await json<{ text: string }>(ok);
+    expect(body.text).toMatch(/^(Weirdo|Rare|Odd|Normal|Boring)$/);
+    expect(setFlair).toHaveBeenCalledWith(
+      expect.objectContaining({
+        subredditName: 'areyounormal',
+        username: 'alice',
+        text: body.text,
+      })
+    );
+  });
+
+  test('joining subscribes the player, and logged-out players are refused', async ({
+    headers,
+  }) => {
+    at(DAY1);
+    const postId = await install(headers);
+    const subscribe = vi
+      .spyOn(reddit, 'subscribeToCurrentSubreddit')
+      .mockResolvedValue(undefined);
+    expect(
+      (await call(headers, { ...ANON, postId }, '/api/join', {})).status
+    ).toBe(400);
+    expect(subscribe).not.toHaveBeenCalled();
+    expect(
+      (await call(headers, { ...ALICE, postId }, '/api/join', {})).status
+    ).toBe(200);
+    expect(subscribe).toHaveBeenCalledTimes(1);
+  });
+
+  test('the edition carries the subreddit name for the join button', async ({
+    headers,
+  }) => {
+    at(DAY1);
+    const postId = await install(headers);
+    const s = await json<StateResponse>(
+      await call(headers, { ...ALICE, postId }, '/api/state')
+    );
+    expect(s.edition.subreddit).toBe('areyounormal');
+  });
+});

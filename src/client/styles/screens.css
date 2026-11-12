@@ -585,3 +585,73 @@
 .day-head .stamp {
   margin: 14px 0 4px 4px;
 }
+
+/* Day-card secondary actions, reveal legend, guess hint. */
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.btn.small {
+  min-height: 46px;
+  padding: 0 12px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  justify-content: center;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.legend .key-ink,
+.legend .key-red {
+  display: inline-block;
+  width: 9px;
+  height: 14px;
+  background: var(--ink);
+}
+
+.legend .key-red {
+  width: 3px;
+  margin-left: 14px;
+  background: var(--red);
+}
+
+.guess-hint {
+  margin: 4px 0 0;
+  text-align: center;
+}
+
+/* The stamp lands on the chart, like a rubber stamp on a printed form. */
+.crowd-wrap.reveal {
+  position: relative;
+}
+
+.crowd-wrap.reveal .stamp {
+  position: absolute;
+  top: 6px;
+  right: 2px;
+  z-index: 1;
+  background: color-mix(in srgb, var(--paper) 72%, transparent);
+}
+
+.reveal-screen .truth {
+  align-items: center;
+}
+
+.reveal-screen .truth .of {
+  max-width: 240px;
+  font-size: 16px;
+}
+
+.readout .unset {
+  color: var(--ink-3);
+}

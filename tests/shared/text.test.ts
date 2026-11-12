@@ -187,3 +187,11 @@ describe('summaries', () => {
     );
   });
 });
+
+describe('flair text', () => {
+  it('adds the streak only when it is longer than a day', async () => {
+    const { flairText } = await import('../../src/server/core/belonging');
+    expect(flairText('Odd', 1)).toBe('Odd');
+    expect(flairText('Odd', 4)).toBe('Odd · 4-day streak');
+  });
+});
