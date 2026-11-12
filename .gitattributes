@@ -4,3 +4,5 @@
 *.woff2 binary
 content/data/** linguist-vendored
 content/**/*.csv linguist-vendored
+docs/*.html linguist-documentation
+content/** linguist-vendored
