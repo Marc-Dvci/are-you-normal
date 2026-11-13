@@ -274,9 +274,10 @@ describe('the daily job', () => {
       .map(({ i }) => first.options[i]!);
     const paras = text.split(PARA);
     const head = paras.indexOf(`**${first.text}**`);
-    const [subLine, surveyLine] = paras.slice(head + 1, head + 3);
+    const [subLine, surveyLine, sourceLine] = paras.slice(head + 1, head + 4);
     expect(subLine).toMatch(/^This sub, 1 answer: /);
-    expect(surveyLine).toContain(`Survey (${first.source.name}`);
+    expect(surveyLine).toMatch(/^Survey: /);
+    expect(sourceLine).toBe(`*Source: ${first.source.name}.*`);
     const names = (line: string) =>
       line
         .split(': ')

@@ -48,7 +48,9 @@ export const finalCountText = async (n: number): Promise<string | null> => {
       const year = bq.source.year ? `, ${bq.source.year}` : '';
       lines.push(
         '',
-        `Survey (${bq.source.name}${year}): ${splitText(bq.options, bq.pcts, order)}`
+        `Survey: ${splitText(bq.options, bq.pcts, order)}`,
+        '',
+        `*Source: ${bq.source.name}${year}.*`
       );
       const contrast = contrastLine(bq.options, bq.pcts, counts, total);
       if (contrast) lines.push('', contrast);

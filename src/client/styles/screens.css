@@ -415,6 +415,10 @@
   font-variant-numeric: tabular-nums;
 }
 
+.actions.today {
+  margin: 20px 0 24px;
+}
+
 .next {
   margin: 20px 0 24px;
   font-size: 13px;

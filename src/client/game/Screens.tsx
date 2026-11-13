@@ -487,7 +487,7 @@ export const DayScreen = ({
         Next edition in <Countdown to={nextAt} />
       </p>
     ) : today.url ? (
-      <div className="actions">
+      <div className="actions today">
         <button type="button" className="btn" onClick={onToday}>
           <span>Play today’s edition, No. {today.number}</span>
           <span className="arrow" aria-hidden="true">
