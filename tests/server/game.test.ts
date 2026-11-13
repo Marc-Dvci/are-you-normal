@@ -11,6 +11,9 @@ const DAY1 = new Date('2026-11-20T09:00:00Z');
 const DAY2 = new Date('2026-11-21T09:00:00Z');
 const DAY4 = new Date('2026-11-23T09:00:00Z');
 
+/** Markdown paragraph break in the app's comments. */
+const PARA = '\n\n';
+
 beforeEach(() => {
   recordComments();
 });
@@ -246,7 +249,103 @@ describe('the daily job', () => {
     );
     expect(final?.parent).toBe(p1);
     expect(final?.runAs).toBe('APP');
-    expect(final?.text).toContain('1 players');
+    expect(final?.text).toContain('**Final count for No. 1**: 1 player.');
+    expect(final?.text).not.toContain('players');
+    expect(await redis.get('ed:1:final')).toBe(final?.id);
+  });
+
+  test('the final count lists both rows in the survey order and names the survey', async ({
+    headers,
+  }) => {
+    at(DAY1);
+    const comments = recordComments();
+    const p1 = await install(headers);
+    const first = BANK[0]!;
+    const last = first.options.length - 1;
+    await play(headers, ALICE, p1, 0, last, 10);
+    at(DAY2);
+    await call(headers, {}, '/internal/scheduler/new-edition', {});
+    const text = comments.find(
+      (c) => c.parent === p1 && c.text.startsWith('**Final')
+    )!.text;
+    const order = first.pcts
+      .map((p, i) => ({ p, i }))
+      .sort((a, b) => b.p - a.p)
+      .map(({ i }) => first.options[i]!);
+    const paras = text.split(PARA);
+    const head = paras.indexOf(`**${first.text}**`);
+    const [subLine, surveyLine] = paras.slice(head + 1, head + 3);
+    expect(subLine).toMatch(/^This sub, 1 answer: /);
+    expect(surveyLine).toContain(`Survey (${first.source.name}`);
+    const names = (line: string) =>
+      line
+        .split(': ')
+        .slice(1)
+        .join(': ')
+        .split(' · ')
+        .map((x) => x.replace(/ [\d.]+%$/, ''));
+    expect(names(subLine!)).toEqual(order);
+    expect(names(surveyLine!)).toEqual(order);
+    const third = paras.indexOf(`**${BANK[2]!.text}**`);
+    expect(paras[third + 1]).toBe('This sub: no answers.');
+  });
+
+  test('an upgrade rewrites a final count posted in older wording', async ({
+    headers,
+  }) => {
+    at(DAY1);
+    const p1 = await install(headers);
+    await playDay(headers, ALICE, p1);
+    at(DAY2);
+    await call(headers, {}, '/internal/scheduler/new-edition', {});
+    await redis.del('ed:1:final');
+    const edit = vi.fn(async () => undefined);
+    const old = {
+      id: 't1_old',
+      parentId: p1,
+      body: '**Final count for No. 1**, 1 players.',
+      edit,
+    };
+    const other = { id: 't1_other', parentId: p1, body: 'Results', edit };
+    vi.spyOn(reddit, 'getComments').mockImplementation(
+      () =>
+        ({ all: async () => [other, old] }) as unknown as ReturnType<
+          typeof reddit.getComments
+        >
+    );
+    const res = await call(
+      headers,
+      {},
+      '/internal/triggers/on-app-upgrade',
+      {}
+    );
+    expect((await json<{ message: string }>(res)).message).toBe(
+      '1 final counts rewritten'
+    );
+    expect(edit).toHaveBeenCalledTimes(1);
+    const calls = edit.mock.calls as unknown as [{ text: string }][];
+    expect(calls[0]![0].text).toMatch(
+      /^\*\*Final count for No\. 1\*\*: 1 player\./
+    );
+    expect(await redis.get('ed:1:final')).toBe('t1_old');
+  });
+
+  test('an old edition points to today’s post', async ({ headers }) => {
+    at(DAY1);
+    const p1 = await install(headers);
+    expect((await state(headers, ALICE, p1)).edition.today).toEqual({
+      number: 1,
+      url: null,
+    });
+    at(DAY2);
+    await call(headers, {}, '/internal/scheduler/new-edition', {});
+    const ed2 = await findPost(headers, 2);
+    const old = await state(headers, ALICE, p1);
+    expect(old.edition.isToday).toBe(false);
+    expect(old.edition.today.number).toBe(2);
+    expect(old.edition.today.url).toBe(
+      `https://www.reddit.com/r/areyounormal/comments/${ed2.replace('t3_', '')}/`
+    );
   });
 
   test('the moderator menu posts today if the job did not', async ({

@@ -1,9 +1,14 @@
-import { requestExpandedMode } from '@devvit/web/client';
+import { navigateTo, requestExpandedMode } from '@devvit/web/client';
 import { useEffect, useState, type MouseEvent } from 'react';
 import { formatEditionDate } from '../../shared/edition';
 import { STAMP_WORD } from '../../shared/scoring';
 import { summarize } from '../../shared/summary';
-import type { DaySummary, Reveal, StateResponse } from '../../shared/types';
+import type {
+  DaySummary,
+  EditionInfo,
+  Reveal,
+  StateResponse,
+} from '../../shared/types';
 import { api } from '../lib/api';
 import { journey } from '../lib/journey';
 import { localDay, pending } from '../lib/progress';
@@ -48,6 +53,21 @@ const viewOf = (s: StateResponse): View => {
 
 const open = (event: MouseEvent) =>
   requestExpandedMode(event.nativeEvent, 'game');
+
+/** On an old edition: a link to today's post. */
+const TodayLink = ({ today }: { today: EditionInfo['today'] }) =>
+  today.url ? (
+    <button
+      type="button"
+      className="link today-link"
+      onClick={() => {
+        journey.interaction('open_today');
+        navigateTo(today.url!);
+      }}
+    >
+      Today’s is No. {today.number} →
+    </button>
+  ) : null;
 
 export const Splash = () => {
   const [view, setView] = useState<View>({ kind: 'loading' });
@@ -110,8 +130,12 @@ export const Splash = () => {
             <span>
               Tap your answer to play. {total} questions, about a minute.
             </span>
-            {s.edition.players > 0 && (
-              <span className="num">{s.edition.players} played today</span>
+            {s.edition.isToday ? (
+              s.edition.players > 0 && (
+                <span className="num">{s.edition.players} played today</span>
+              )
+            ) : (
+              <TodayLink today={s.edition.today} />
             )}
           </p>
           <div className="splash-strip" aria-hidden="true">
@@ -162,11 +186,15 @@ export const Splash = () => {
               →
             </span>
           </button>
-          {s.edition.isToday && (
+          {s.edition.isToday ? (
             <p className="foot">
               <span>
                 Next edition in <Countdown to={s.edition.nextAt} />
               </span>
+            </p>
+          ) : (
+            <p className="foot">
+              <TodayLink today={s.edition.today} />
             </p>
           )}
         </div>

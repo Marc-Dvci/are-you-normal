@@ -8,7 +8,7 @@ import type {
 } from '../../shared/types';
 import { CrowdGrid } from '../ui/CrowdGrid';
 import { FigureRow } from '../ui/Figure';
-import { count, ordinal, pctText } from '../lib/format';
+import { count, ordinal, pctText } from '../../shared/format';
 import { AnswerRows, Countdown, Kicker, Stamp } from '../ui/Parts';
 
 const topicOf = (q: PublicQuestion) =>
@@ -304,6 +304,8 @@ export const DayScreen = ({
   loggedIn,
   nextAt,
   isToday,
+  today,
+  onToday,
   onVerdict,
   onPropose,
   onLogin,
@@ -323,6 +325,8 @@ export const DayScreen = ({
   loggedIn: boolean;
   nextAt: string;
   isToday: boolean;
+  today: { number: number; url: string | null };
+  onToday: () => void;
   onVerdict: () => void;
   onPropose: () => void;
   onLogin: () => void;
@@ -463,7 +467,11 @@ export const DayScreen = ({
     </div>
     {board.length > 0 && (
       <div className="board">
-        <p className="kicker">Best readers of people today</p>
+        <p className="kicker">
+          {isToday
+            ? 'Best readers of people today'
+            : `Best readers of people on No. ${summary.edition}`}
+        </p>
         <ol>
           {board.map((row) => (
             <li key={row.username}>
@@ -474,14 +482,21 @@ export const DayScreen = ({
         </ol>
       </div>
     )}
-    <p className="next">
-      {isToday ? (
-        <>
-          Next edition in <Countdown to={nextAt} />
-        </>
-      ) : (
-        'Today’s edition is up in the subreddit.'
-      )}
-    </p>
+    {isToday ? (
+      <p className="next">
+        Next edition in <Countdown to={nextAt} />
+      </p>
+    ) : today.url ? (
+      <div className="actions">
+        <button type="button" className="btn" onClick={onToday}>
+          <span>Play today’s edition, No. {today.number}</span>
+          <span className="arrow" aria-hidden="true">
+            →
+          </span>
+        </button>
+      </div>
+    ) : (
+      <p className="next">Today’s edition is up in the subreddit.</p>
+    )}
   </section>
 );

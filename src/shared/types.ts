@@ -85,6 +85,8 @@ export type EditionInfo = {
   /** ISO time of the next edition. */
   nextAt: string;
   isToday: boolean;
+  /** Today's edition, so an old post can send players to it. */
+  today: { number: number; url: string | null };
   subreddit: string;
 };
 

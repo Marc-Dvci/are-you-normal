@@ -1,10 +1,12 @@
 import { context } from '@devvit/web/server';
 import type { UiResponse } from '@devvit/web/shared';
 import { Hono } from 'hono';
+import { refreshFinalCounts } from '../core/close';
 import {
   createEdition,
   ensureEpoch,
   ensureTodayEdition,
+  todayEdition,
 } from '../core/editions';
 
 export const internal = new Hono();
@@ -57,5 +59,19 @@ internal.post('/triggers/on-app-install', async (c) => {
   } catch (error) {
     console.error('Install failed', error);
     return c.json({ status: 'error', message: 'Could not post No. 1' }, 400);
+  }
+});
+
+/** Upgrade: rewrites posted final counts in the current wording. */
+internal.post('/triggers/on-app-upgrade', async (c) => {
+  try {
+    const edited = await refreshFinalCounts(await todayEdition(new Date()));
+    return c.json({
+      status: 'success',
+      message: `${edited} final counts rewritten`,
+    });
+  } catch (error) {
+    console.error('Upgrade failed', error);
+    return c.json({ status: 'error', message: 'Upgrade step failed' }, 400);
   }
 });

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { count, ordinal, pctText } from '../../src/client/lib/format';
+import { count, ordinal, pctText } from '../../src/shared/format';
 
 describe('display formats', () => {
   it.each([

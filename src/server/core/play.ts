@@ -196,6 +196,7 @@ export const getState = async (
     redis.get(K.players(n)),
     readBoard(n),
   ]);
+  const todayPost = n === today ? null : await redis.get(K.editionPost(today));
   const answers: (number | null)[] = stored.map(() => null);
   const reveals: (Reveal | null)[] = stored.map(() => null);
   let summary: DaySummary | null = null;
@@ -243,6 +244,12 @@ export const getState = async (
       players: Number(players ?? '0'),
       nextAt: nextEditionAt(now).toISOString(),
       isToday: n === today,
+      today: {
+        number: today,
+        url: todayPost
+          ? `https://www.reddit.com/r/${context.subredditName}/comments/${todayPost.replace(/^t3_/, '')}/`
+          : null,
+      },
       subreddit: context.subredditName,
     },
     me: {

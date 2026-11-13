@@ -379,6 +379,12 @@ export const Game = () => {
           loggedIn={loggedIn}
           nextAt={state.edition.nextAt}
           isToday={state.edition.isToday}
+          today={state.edition.today}
+          onToday={() => {
+            if (!state.edition.today.url) return;
+            journey.interaction('open_today');
+            navigateTo(state.edition.today.url);
+          }}
           onVerdict={() => void onVerdict()}
           onPropose={() => void onPropose()}
           onLogin={() => showLoginPrompt()}

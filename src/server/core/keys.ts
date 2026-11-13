@@ -17,6 +17,7 @@ export const K = {
   proposers: (n: number) => `ed:${n}:proposers`,
   verdictComments: (n: number) => `ed:${n}:verdict-comments`,
   closed: (n: number) => `ed:${n}:closed`,
+  finalComment: (n: number) => `ed:${n}:final`,
   userDay: (userId: string, n: number) => `u:${userId}:ed:${n}`,
   userStats: (userId: string) => `u:${userId}:stats`,
   live: (n: number, q: number) => `live:${n}:${q}`,
