@@ -1,15 +1,15 @@
 # Are You Normal?
 
 [![CI](https://github.com/Marc-Dvci/are-you-normal/actions/workflows/ci.yaml/badge.svg)](https://github.com/Marc-Dvci/are-you-normal/actions/workflows/ci.yaml)
-![Tests](https://img.shields.io/badge/tests-298%20passing-2f7d32)
+![Tests](https://img.shields.io/badge/tests-301%20passing-2f7d32)
 ![Questions](https://img.shields.io/badge/cited%20questions-112-1d4ed8)
 [![Licence](https://img.shields.io/badge/licence-BSD--3--Clause-555)](LICENSE)
 [![Play on Reddit](https://img.shields.io/badge/play-r%2FAreYouNormalDaily-ff4500)](https://www.reddit.com/r/AreYouNormalDaily/)
 
 <p align="center">
-  <img src="docs/feed-card.png" width="250" alt="The feed card on Reddit: edition No. 1 asks 'Do you recline your seat when you fly?' with five answer boxes and a row of figures">
-  <img src="docs/reveal.png" width="250" alt="A reveal on Reddit: 30 in 100 flyers said 'Once in a while', an ODD stamp on the crowd, the guess 8 off for 84 points, and the survey and subreddit rows">
-  <img src="docs/day-card.png" width="250" alt="The day card on Reddit: an ODD stamp, 244 of 300 points, rank 1st, a 1-day streak and the line 'You know exactly how normal you are. Unsettling.'">
+  <img src="docs/feed-card.png" width="250" alt="The feed card on Reddit: edition No. 2 asks 'How do you like your steak?' with five answer boxes and a row of figures">
+  <img src="docs/reveal.png" width="250" alt="A reveal on Reddit: 5 in 100 steak eaters said 'Rare', a RARE stamp on the crowd, the guess 7 off for 87 points, and the survey and subreddit rows">
+  <img src="docs/day-card.png" width="250" alt="The day card on Reddit: an ODD stamp, the line 'You kept the statisticians slightly awake.', 250 of 300 points, rank 1st and a 2-day streak">
 </p>
 
 **A daily Reddit game that puts you, your subreddit and a real published survey on the same chart.**
@@ -22,7 +22,7 @@ Every day a new post asks three everyday questions. You answer for yourself, gue
 | App listing | [developers.reddit.com/apps/areyounormaldaily](https://developers.reddit.com/apps/areyounormaldaily) |
 | Built with | Devvit Web (interactive posts, Redis, realtime, scheduler, menu actions, triggers, Journeys), TypeScript, React 19, Hono |
 | Question bank | 112 cited questions from FiveThirtyEight, the Young People Survey, the UK Food Standards Agency, Eurostat, the US Bureau of Labor Statistics, the UK Office for National Statistics, Statistics Sweden, Statistics Netherlands and Pew Research Center |
-| Tests | 298 passing, 95% of server and shared lines and 80% of branches covered, plus 8 browser tests with axe-core |
+| Tests | 301 passing, 95% of server and shared lines and 80% of branches covered, plus 8 browser tests with axe-core |
 
 [How to play](#how-to-play) · [For judges](#for-judges) · [Reddit features](#reddit-features) · [The numbers](#where-the-numbers-come-from) · [Run it](#run-it)
 
@@ -36,23 +36,23 @@ Every day a new post asks three everyday questions. You answer for yourself, gue
 
 Then you can post your verdict as a reply in the day's results thread, wear your stamp as flair, join the subreddit, or propose tomorrow's question.
 
-<p align="center"><img src="docs/guess-and-reveal.gif" width="300" alt="Recorded on Reddit: the player fills the crowd to guess 22 in 100, locks the guess, and the survey's 30 in 100 fills in with an ODD stamp"></p>
+<p align="center"><img src="docs/guess-and-reveal.gif" width="300" alt="Recorded on Reddit: the player fills the crowd to guess 12 in 100, locks the guess, and the survey's 5 in 100 fills in with a RARE stamp"></p>
 
 ## For judges
 
 | Criterion | What to look at | Where it lives |
 |---|---|---|
 | Delightful UX | One tap on the feed card starts the game. The guess is a tap or a drag across a 10 × 10 Isotype crowd. A rubber stamp and a verdict line land on every reveal. | [`Splash.tsx`](src/client/splash/Splash.tsx), [`CrowdGrid.tsx`](src/client/ui/CrowdGrid.tsx), [`verdicts.ts`](src/shared/verdicts.ts) |
-| Polish | 298 unit and integration tests, 8 Playwright tests with axe-core WCAG 2.2 AA checks in light and dark mode, and every survey share recomputed from its raw data on each run. | [`tests/`](tests), [`e2e/game.spec.ts`](e2e/game.spec.ts), [`tests/content/bank.test.ts`](tests/content/bank.test.ts) |
+| Polish | 301 unit and integration tests, 8 Playwright tests with axe-core WCAG 2.2 AA checks in light and dark mode, and every survey share recomputed from its raw data on each run. | [`tests/`](tests), [`e2e/game.spec.ts`](e2e/game.spec.ts), [`tests/content/bank.test.ts`](tests/content/bank.test.ts) |
 | Reddit-y | The subreddit plays against the real world. Players reply with their verdict as themselves, wear their stamp as flair, and write tomorrow's community question as a comment the subreddit votes on. | [`compare.ts`](src/shared/compare.ts), [`share.ts`](src/server/core/share.ts), [`community.ts`](src/server/core/community.ts), [`belonging.ts`](src/server/core/belonging.ts) |
 | Daily Content | A scheduled job posts each edition and closes yesterday's with the final count. 112 cited questions plus one community question a day. | [`editions.ts`](src/server/core/editions.ts), [`close.ts`](src/server/core/close.ts), [`devvit.json`](devvit.json), [`questions.json`](src/server/content/questions.json) |
 
 ## What makes it a daily game
 
-- **A new edition every day.** Editions change at midnight UTC. A scheduled job posts each one. A moderator menu item and the first visit after midnight post it too if the job has not, and a lock keeps it to one post a day. Each edition freezes its questions when it is made, so older posts stay playable.
+- **A new edition every day.** Editions change at midnight UTC. A scheduled job posts each one. A moderator menu item and the first visit after midnight post it too if the job has not, and a lock keeps it to one post a day. Each edition freezes its questions when it is made, so older posts stay playable, and an older post links to today's edition from its feed card and its day card.
 - **Streaks.** Finishing an edition on its own day extends your streak. Catching up on an old one counts as played but does not extend it.
 - **The subreddit writes the third question.** At the end of the game, players propose a question with two to four answers. It is posted as their own comment. The most upvoted proposal with at least one upvote besides the author's runs the next day as the community question, credited to its author and answered by players here.
-- **The count is closed every night.** When a new edition is posted, the app writes the final count for yesterday's edition as a comment on its post: the subreddit's split, the survey's split and the biggest difference between them.
+- **The count is closed every night.** When a new edition is posted, the app writes the final count for yesterday's edition as a comment on its post: the subreddit's split and the survey's split in the same order, the survey's source, and the biggest difference between them.
 
 ## Why the guess is scored and the answer is not
 
@@ -64,7 +64,7 @@ The game never scores your answer. If being normal earned points, people would p
 |---|---|---|
 | Interactive posts | An inline feed card with the first question, and an expanded game view | [`devvit.json`](devvit.json), [`Splash.tsx`](src/client/splash/Splash.tsx), [`Game.tsx`](src/client/game/Game.tsx) |
 | Scheduler | Posts the new edition at 00:01 UTC | [`devvit.json`](devvit.json), [`internal.ts`](src/server/routes/internal.ts) |
-| Triggers and menu actions | Posts No. 1 on install; moderators can post today's edition by hand | [`internal.ts`](src/server/routes/internal.ts) |
+| Triggers and menu actions | Posts No. 1 on install; on upgrade, rewrites the final counts already posted in the current wording; moderators can post today's edition by hand | [`internal.ts`](src/server/routes/internal.ts) |
 | Redis | One vote per player per question, guesses, scores, ranks, streaks, proposals | [`votes.ts`](src/server/core/votes.ts), [`play.ts`](src/server/core/play.ts) |
 | Realtime | Live subreddit counts on open reveals | [`votes.ts`](src/server/core/votes.ts) |
 | Comments | The results thread and the nightly count as the app; verdicts and proposals as the player, only after a button press | [`editions.ts`](src/server/core/editions.ts), [`share.ts`](src/server/core/share.ts), [`community.ts`](src/server/core/community.ts) |
@@ -106,6 +106,8 @@ Questions stay on everyday habits, manners and tastes. The game keeps away from 
 | One vote per player per question; the first answer stands | [`votes.ts`](src/server/core/votes.ts) | `tests/server/game.test.ts` › one vote per player per question |
 | The subreddit is compared with the survey only from ten answers | [`compare.ts`](src/shared/compare.ts) | `tests/shared/text.test.ts` › contrastLine stays silent below 10 answers |
 | The daily job makes one post per day and closes yesterday | [`editions.ts`](src/server/core/editions.ts) | `tests/server/game.test.ts` › the daily job |
+| The final count lines up the subreddit and the survey and names the source | [`close.ts`](src/server/core/close.ts) | `tests/server/game.test.ts` › the final count lists both rows in the survey order |
+| An older edition links to today's post | [`play.ts`](src/server/core/play.ts), [`Splash.tsx`](src/client/splash/Splash.tsx) | `tests/server/game.test.ts` › an old edition points to today's post |
 | The most upvoted proposal becomes tomorrow's third question | [`community.ts`](src/server/core/community.ts) | `tests/server/community.test.ts` › community questions |
 | Off-limits proposals are refused before anything is posted | [`proposal.ts`](src/shared/proposal.ts) | `tests/server/community.test.ts`, `tests/shared/proposal.test.ts` |
 | Streaks grow on consecutive days; catching up does not extend them | [`play.ts`](src/server/core/play.ts) | `tests/server/game.test.ts` › streaks |
@@ -129,7 +131,7 @@ Requires Node 24.
 
 ```bash
 npm install
-npm test                 # 298 tests, no network, no Reddit account
+npm test                 # 301 tests, no network, no Reddit account
 npm run dev:api          # local API on :8787, using Reddit's own test mocks
 npm run dev:web          # local client on :5173, open /splash.html or /game.html
 npm run test:e2e         # browser tests with axe-core (starts both servers)
